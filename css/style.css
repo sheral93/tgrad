@@ -1140,8 +1140,9 @@ a.primary:hover {
 }
 
 .slide-content {
-    padding: 150px 45px 0;
+    padding: 0 45px;
     color: #ffffff;
+    height: 100%;
 }
 
 .slide-content .h4 {
@@ -1281,7 +1282,7 @@ a.slide-btn {
         top: 95px;
     }
     .slide-content {
-        padding: 50px 35px 0;
+        padding: 0 35px;
         color: #ffffff;
     }
     .slide-content .container {
