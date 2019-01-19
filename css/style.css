@@ -886,8 +886,11 @@ a.primary:hover {
         height: 50px;
         padding: 5px 0;
     }
-    .header .navbar-nav .nav-link img {
+    .header .navbar-nav .nav-link svg {
         max-height: 33px;
+    }
+    .header .navbar-nav .nav-link svg .st0{
+        fill: #ffffff;
     }
     .header .dropdown-menu {
         margin-top: 0;
@@ -921,12 +924,12 @@ a.primary:hover {
         color: #000000;
     }
     .header .navbar-nav #dropdown-menu-1.show {
-        background-image: url('img/menu-1.png');
+        background-image: url('../images/menu-1.png');
         background-repeat: no-repeat;
         min-height: 481px;
     }
     .header .navbar-nav #dropdown-menu-2.show {
-        background-image: url('img/menu-2.png');
+        background-image: url('../images/menu-2.png');
         background-repeat: no-repeat;
         min-height: 625px;
     }
@@ -965,6 +968,10 @@ a.primary:hover {
     border-bottom: 1px solid #e5e5e5;
 }
 
+.header .mobile-menu .nav-item:last-child .nav-link {
+    border-bottom: none;
+}
+
 .header .mobile-menu .nav-item.dropdown>.nav-link {
     font-weight: 600;
     background-color: #e9e9e9;
@@ -988,6 +995,10 @@ a.primary:hover {
     background-color: #f5f5f5;
     line-height: 35px;
     padding: 6px 24px;
+}
+
+.header .mobile-menu .dropdown-menu .nav-item:last-child .nav-link {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .header .mobile-menu .nav-item .nav-link:hover {
@@ -1117,11 +1128,9 @@ a.primary:hover {
     left: 0;
     right: 0;
     bottom: 0;
-}
-
-.slide-bg img {
-    width: 100%;
-    min-width: 1200px;
+    background-size: auto 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .slide .btn-lg {
@@ -1130,33 +1139,9 @@ a.primary:hover {
     font-size: .875rem;
 }
 
-@media only screen and (max-width: 1200px) {
-    .slide-bg img {
-        margin-left: calc(50% - 600px);
-    }
-}
-
 .slide-content {
-    position: absolute;
-    top: 0;
-    left: calc(50% - 600px);
-    right: 0;
-    bottom: 0;
+    padding: 150px 45px 0;
     color: #ffffff;
-    padding: 170px 120px;
-    width: 1200px;
-}
-
-@media only screen and (max-width: 992px) {
-    .slide-content {
-        width: 992px;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .slide-content {
-        width: 1200px;
-    }
 }
 
 .slide-content .h4 {
@@ -1164,7 +1149,7 @@ a.primary:hover {
 }
 
 .slider-price {
-    margin-top: 60px;
+    margin: 30px 0;
 }
 
 .slide-content .old-price {
@@ -1178,6 +1163,12 @@ a.primary:hover {
     height: 507px;
     overflow: hidden;
     position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    .slide-viewer {
+        height: 200px;
+    }
 }
 
 .slide-group {
@@ -1240,7 +1231,6 @@ a.slide-btn {
     margin: auto;
     position: absolute;
     top: 228px;
-    background-image: url(img/slider-prev.svg);
 }
 
 .next-btn {
@@ -1248,7 +1238,6 @@ a.slide-btn {
     position: absolute;
     right: 20px;
     top: 228px;
-    background-image: url(img/slider-next.svg);
 }
 
 .previous-btn, .next-btn {
@@ -1261,20 +1250,60 @@ a.slide-btn {
     transition: opacity 0.4s ease-in-out;
     width: 25px;
     height: 50px;
-    background-size: 25px 50px;
-    background-repeat: no-repeat;
+}
+
+.previous-btn svg, .next-btn svg {
+    width: 100%;
+}
+
+.previous-btn svg .st0, .next-btn svg .st0{
+    fill: #a1a3d4;
+}
+
+.previous-btn:hover svg .st0, .next-btn:hover svg .st0{
+    fill: #e55760;
 }
 
 .previous-btn:hover, .next-btn:hover {
     opacity: 1;
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
+    .previous-btn, .next-btn {
+        cursor: pointer;
+        width: 10px;
+        height: 20px;
+    }
     .previous-btn {
-        left: 50px;
+        top: 95px;
     }
     .next-btn {
-        right: 50px;
+        top: 95px;
+    }
+    .slide-content {
+        padding: 50px 35px 0;
+        color: #ffffff;
+    }
+    .slide-content .container {
+        width: 100%;
+    }
+    .slide-content h6 {
+        font-size: .96rem;
+        margin-bottom: 10px;
+    }
+    .slide-content .slider-price {
+        margin: 10px 0;
+    }
+    .slide-content .slider-price .h4 {
+        font-size: .7rem;
+        margin-bottom: 10px;
+    }
+    .slide-content .slider-price .old-price {
+        font-size: .57rem;
+    }
+    .slide-content .btn {
+        font-size: .7rem;
+        padding: 5px 8px;
     }
 }
 
@@ -1583,7 +1612,6 @@ a.slide-btn {
     margin: auto;
     position: absolute;
     top: 150px;
-    background-image: url(img/slider-prev.svg);
 }
 
 .slick-next {
@@ -1591,7 +1619,18 @@ a.slide-btn {
     position: absolute;
     right: -20px;
     top: 150px;
-    background-image: url(img/slider-next.svg);
+}
+
+.slick-next svg, .slick-prev svg {
+    width: 100%;
+}
+
+.slick-next svg .st0, .slick-prev svg .st0{
+    fill: #a1a3d4;
+}
+
+.slick-next:hover svg .st0, .slick-prev:hover svg .st0{
+    fill: #e55760;
 }
 
 .slick-prev, .slick-next {
@@ -1607,8 +1646,7 @@ a.slide-btn {
     transition: opacity 0.4s ease-in-out;
     width: 25px;
     height: 50px;
-    background-size: 25px 50px;
-    background-repeat: no-repeat;
+    padding: 0;
 }
 
 .slick-prev:focus, .slick-next:focus {
@@ -1958,6 +1996,18 @@ a.slide-btn {
     color: #ffffff;
 }
 
+.footer .logo {
+    font-size: 1rem;
+    color: #ffffff;
+} 
+
+.footer .logo a {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #ffffff;
+    text-decoration: none;
+} 
+
 .footer h6 {
     font-size: .875rem;
     margin-bottom: 20px;
@@ -2026,6 +2076,22 @@ a.slide-btn {
     fill: #4d50a0;
 }
 
+.footer .payment-types {
+    text-align: right;
+}
+
+.footer .payment-types img {
+    margin-left: 18px;
+}
+
+.footer .copyright {
+    color: #a5a6bc;
+}
+
+.footer .footer-bottom {
+    margin: 80px 0 0;
+}
+
 @media screen and (max-width: 767px) {
     .footer {
         text-align: center;
@@ -2035,14 +2101,24 @@ a.slide-btn {
     }
     .footer h6{
         font-size: 1.14rem;
+        margin-top: 20px;
     }
     .footer .logo {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
         display: block;
     }
     .footer .social {
         text-align: center;
-        margin-top: 25px;
+        margin-top: 20px;
+    }
+    .footer .footer-bottom {
+        margin: 25px 0 0;
+    }
+    .footer .payment-types {
+        text-align: center;
+    }
+    .footer .social a svg {
+        margin: 0 10px;
     }
 }
 

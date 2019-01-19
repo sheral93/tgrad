@@ -149,8 +149,8 @@ $(document).ready(function () {
           variableWidth: true,
           slidesToShow: 5,
           slidesToScroll: 1,
-          prevArrow: '<button type="button" class="slick-prev"></button>',
-          nextArrow: '<button type="button" class="slick-next"></button>',
+          prevArrow: '<button type="button" class="slick-prev"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 252.1 477.2" style="enable-background:new 0 0 252.1 477.2;" xml:space="preserve"><g><path class="st0" d="M3.9,248.1L229,473.2c5.3,5.3,13.8,5.3,19.1,0c5.3-5.3,5.3-13.8,0-19.1L32.6,238.6L248.1,23.1c5.3-5.3,5.3-13.8,0-19.1c-2.6-2.6-6.1-4-9.5-4s-6.9,1.3-9.5,4L4,229.1C-1.3,234.3-1.3,242.9,3.9,248.1z"/></g></svg></button>',
+          nextArrow: '<button type="button" class="slick-next"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 248.2 477.2" style="enable-background:new 0 0 248.2 477.2;" xml:space="preserve"><g><path class="st0" d="M248.2,229.1L23.1,4C17.8-1.3,9.3-1.3,4,4s-5.3,13.8,0,19.1l215.5,215.5L4,454.1c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C253.4,242.9,253.4,234.3,248.2,229.1z"/></g></svg></button>',
           customPaging: function (slider, pageIndex) {
             return $('<button></button').text(slider.$slider.data('buttonlabel'));
           }
