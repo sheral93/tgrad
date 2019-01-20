@@ -2833,8 +2833,8 @@ ul.list.dashed li {
     box-shadow: none;
     -webkit-transform: none;
     transform: none;
-    left: 8px;
-    top: 8px;
+    left: 18px;
+    top: 25px;
 }
 
 .styled-checkbox:checked+label:before {
