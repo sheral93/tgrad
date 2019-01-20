@@ -84,6 +84,14 @@ body.body-404 {
     font-weight: 700;
 }
 
+.bold {
+    font-weight: 700;
+}
+
+.demibold {
+    font-weight: 600;
+}
+
 @media screen and (max-width: 767px) {
     .container {
         width: 320px;
@@ -107,6 +115,7 @@ body.body-404 {
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     border-radius: 8px;
     height: 38px;
+    color: #000000;
 }
 
 .form-control:focus {
@@ -118,7 +127,7 @@ body.body-404 {
 }
 
 .form-control::placeholder {
-    color: #747474;
+    color: #979797;
 }
 
 .form-control:-ms-input-placeholder {
@@ -331,6 +340,7 @@ a.primary:hover {
 .styled-checkbox {
     position: absolute;
     opacity: 0;
+    display: none;
 }
 
 .styled-checkbox+label {
@@ -394,9 +404,8 @@ a.primary:hover {
     position: relative;
     color: #626262;
     line-height: 1.2;
-    ;
     height: 34px;
-    margin: 0 18px;
+    margin: 0 0;
 }
 
 .select-styled {
@@ -478,17 +487,25 @@ a.primary:hover {
     font-weight: 500;
 }
 
-.content ul {
+.content ul.list {
     list-style: none;
     margin: 1rem;
     padding-left: 60px;
 }
 
-.content ul li {
+.content ul.list li {
     margin: 10px 0;
 }
 
-.content ul li::before {
+.content ol.list {
+    margin: 1rem;
+}
+
+.content ol.list li {
+    margin: 10px 0;
+}
+
+.content ul.list li::before {
     content: "\2022";
     color: #e9585e;
     font-weight: bold;
@@ -2595,6 +2612,10 @@ a.slide-btn {
     padding-left: 30px;
 }
 
+.font-size-1 {
+    font-size: 1rem;
+}
+
 .font-size-1125 {
     font-size: 1.125rem;
 }
@@ -2605,10 +2626,6 @@ a.slide-btn {
 
 .warranty-details {
     margin: 22px 0;
-}
-
-.warranty-details:last-child {
-    margin-bottom: 78px;
 }
 
 .warranty-details h6 {
@@ -2633,6 +2650,10 @@ a.slide-btn {
     .warranty-details:last-child {
         margin-bottom: 23px;
     }
+}
+
+.service-center {
+    margin: 78px 0 0;
 }
 
 .service-center-details {
@@ -2713,16 +2734,16 @@ a.slide-btn {
     margin-bottom: 34px;
 }
 
-.return-details ul {
+ul.list.dashed {
     padding-left: 45px;
     margin-bottom: 35px;
 }
 
-.return-details ul li {
+ul.list.dashed li {
     position: relative;
 }
 
-.return-details ul li::before {
+ul.list.dashed li::before {
     position: absolute;
     top: 7px;
     left: -40px;
@@ -2733,7 +2754,7 @@ a.slide-btn {
     display: inline-block;
 }
 
-.return-details ul li {
+ul.list.dashed li {
     margin: 20px 0;
 }
 
@@ -2760,4 +2781,96 @@ a.slide-btn {
 .return-details .border-bottom {
     border-bottom: 1px solid #d9d9d9;
     padding-block-end: 23px;
+}
+
+.light-login-form {
+    padding: 25px 18px;
+    background-color: #f9f9f9;
+}
+
+.content .form-control {
+    border-radius: 0;
+    background: transparent;
+}
+
+@media screen and (max-width: 767px) {
+    .light-login-form {
+        background-color: #fff;
+    }
+}
+
+.mb-5 {
+    margin-bottom: 2rem!important;
+}
+
+.mb-6 {
+    margin-bottom: 3rem!important;
+}
+
+.form-control.form-control-lg {
+    height: 60px;
+}
+
+.checkbox-lg .styled-checkbox+label:before {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #d1d1d1;
+    border-radius: 4px;
+}
+
+.checkbox-lg .styled-checkbox+label {
+    color: #d1d1d1;
+}
+
+.checkbox-lg .styled-checkbox:checked+label:after {
+    width: 15px;
+    height: 15px;
+    display: block;
+    background-image: url("img/tick.svg");
+    background-size: contain;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-transform: none;
+    transform: none;
+    left: 8px;
+    top: 8px;
+}
+
+.styled-checkbox:checked+label:before {
+    border-color: #474baf;
+}
+
+.styled-checkbox:checked+label {
+    color: #000000;
+}
+
+.registration label {
+    line-height: 60px;
+    padding: 0 10px;
+}
+
+.registration .select {
+    margin: 0 5px;
+}
+
+.font-979797 {
+    color: #979797;
+}
+
+.font-979797 .select {
+    color: #979797;
+}
+
+.transparent-select .selectric {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    padding: 10px 30px 10px 0;
+    min-width: 240px;
+}
+
+.transparent-select .selectric .button {
+    height: 58px;
 }
