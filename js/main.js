@@ -170,4 +170,65 @@ $(document).ready(function () {
       return $slick_slider.slick(settings);
     }
   });
+
+
+  $('select').each(function () {
+    var $this = $(this), numberOfOptions = $(this).children('option').length;
+
+    $this.addClass('select-hidden');
+    $this.wrap('<div class="select"></div>');
+    $this.after('<div class="select-styled"></div>');
+
+    var $styledSelect = $this.next('div.select-styled');
+    $styledSelect.html($this.children('option').eq(0).text() + '<div class="chevrone">    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.2 126">      <title>Ресурс 3</title>      <g id="Слой_2" data-name="Слой 2">        <g id="Capa_1" data-name="Capa 1">          <path class="cls-1" d="M129.05,124.06,246.13,11.53a6.53,6.53,0,0,0,0-9.54,7.2,7.2,0,0,0-9.93,0L124.11,109.71,12,2A7.21,7.21,0,0,0,2.08,2,6.67,6.67,0,0,0,0,6.74a6.44,6.44,0,0,0,2.08,4.74L119.17,124A7.18,7.18,0,0,0,129.05,124.06Z"></path>        </g>      </g>    </svg>  </div>');
+
+    var $list = $('<ul />', {
+      'class': 'select-options'
+    }).insertAfter($styledSelect);
+
+    for (var i = 0; i < numberOfOptions; i++) {
+      $('<li />', {
+        text: $this.children('option').eq(i).text(),
+        rel: $this.children('option').eq(i).val()
+      }).appendTo($list);
+    }
+
+    var $listItems = $list.children('li');
+
+    $styledSelect.click(function (e) {
+      e.stopPropagation();
+      $('div.select-styled.active').not(this).each(function () {
+        $(this).removeClass('active').next('ul.select-options').hide();
+      });
+      $(this).toggleClass('active').next('ul.select-options').toggle();
+    });
+
+    $listItems.click(function (e) {
+      e.stopPropagation();
+      $styledSelect.html($(this).text() + '<div class="chevrone">    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.2 126">      <title>Ресурс 3</title>      <g id="Слой_2" data-name="Слой 2">        <g id="Capa_1" data-name="Capa 1">          <path class="cls-1" d="M129.05,124.06,246.13,11.53a6.53,6.53,0,0,0,0-9.54,7.2,7.2,0,0,0-9.93,0L124.11,109.71,12,2A7.21,7.21,0,0,0,2.08,2,6.67,6.67,0,0,0,0,6.74a6.44,6.44,0,0,0,2.08,4.74L119.17,124A7.18,7.18,0,0,0,129.05,124.06Z"></path>        </g>      </g>    </svg>  </div>').removeClass('active');
+      $this.val($(this).attr('rel'));
+      $list.hide();
+      //console.log($this.val());
+    });
+
+    $(document).click(function () {
+      $styledSelect.removeClass('active');
+      $list.hide();
+    });
+
+    $("#catalog-table-styled").click(function (e) {
+      $("#catalog-items").removeClass("list-styled");
+      $("#catalog-list-styled").removeClass("active");
+      $("#catalog-table-styled").addClass("active");
+      return false;
+    });
+
+    $("#catalog-list-styled").click(function (e) {
+      $("#catalog-items").addClass("list-styled");
+      $("#catalog-table-styled").removeClass("active");
+      $("#catalog-list-styled").addClass("active");
+      return false;
+    });
+
+  });
 });
