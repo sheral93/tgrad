@@ -9,6 +9,8 @@
 	 crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/slick.css" />
 	<link rel="stylesheet" href="css/selectric.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="css/jquery-ui-slider-pips.css">
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -1880,10 +1882,156 @@
 				<div class="col-12 col-md-4 col-lg-3">
 
 				</div>
-
 				<div class="col-12 col-md-8 col-lg-9">
 					<h2 class="medium">Телевизоры <span class="color-grey">(213)</span></h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-md-4 col-lg-3">
+					<div id="filter-form">
+						<form class="font-size-075">
+							<div class="filter-heading">
+								<div class="row">
+									<div class="col-4 flex align-self-center">
+										<a href="#" id="filter-form-hide">Назад</a>
+									</div>
+									<div class="col-4 flex align-self-center">
+										<h5 class="mb-0">Фильтр</h5>
+									</div>
+									<div class="col-4 flex align-self-center">
+										<a href="#" id="filter-form-hide">Сбросить</a>
+									</div>
+								</div>
+							</div>
+							<div class="filter-section">
+								<h5 class="h5 d-none d-md-block">Тип</h5>
+								<a href="#fitlerTypeCollapse" data-toggle="collapse" data-target="#fitlerTypeCollapse" class="d-block d-md-none filter-collapse-link collapsed">Тип</a>
+								<div class="collapse dont-collapse-md" id="fitlerTypeCollapse">
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-1" type="checkbox">
+										<label for="filter-checkbox-1" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-2" type="checkbox">
+										<label for="filter-checkbox-2" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="filter-section">
+								<h5 class="h5 d-none d-md-block">Бренды</h5>
+								<a href="#fitlerBrandCollapse" data-toggle="collapse" data-target="#fitlerBrandCollapse" class="d-block d-md-none mb-0 filter-collapse-link collapsed">Бренды</a>
+								<div class="collapse dont-collapse-md" id="fitlerBrandCollapse">
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-3" type="checkbox">
+										<label for="filter-checkbox-3" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-4" type="checkbox">
+										<label for="filter-checkbox-4" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-5" type="checkbox">
+										<label for="filter-checkbox-5" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-6" type="checkbox">
+										<label for="filter-checkbox-6" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-6" type="checkbox">
+										<label for="filter-checkbox-7" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-7" type="checkbox">
+										<label for="filter-checkbox-8" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-8" type="checkbox">
+										<label for="filter-checkbox-9" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-9" type="checkbox">
+										<label for="filter-checkbox-10" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="filter-section">
+								<h5 class="h5 d-none d-md-block">Цена</h5>
+								<a href="#fitlerPriceCollapse" data-toggle="collapse" data-target="#fitlerPriceCollapse" class="d-block d-md-none mb-0 filter-collapse-link collapsed">Цена</a>
+								<div class="collapse dont-collapse-md" id="fitlerPriceCollapse">
+									<div class="form-group checkbox-md">
+										<div id="slider-range"></div>
+										<div class="row">
+											<div class="col-6 pr-0 font-626262 mt-3">от <span id="slider-range-amount-1"></span></div>
+											<div class="col-6 pl-0 text-right font-626262 mt-3">до <span id="slider-range-amount-2"></span></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="filter-section">
+								<h5 class="h5 d-none d-md-block">Диагональ</h5>
+								<a href="#fitler-collapse-4" data-toggle="collapse" data-target="#fitler-collapse-4" class="d-block d-md-none mb-0 filter-collapse-link collapsed">Диагональ</a>
+								<div class="collapse dont-collapse-md" id="fitler-collapse-4">
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-11" type="checkbox">
+										<label for="filter-checkbox-11" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-12" type="checkbox">
+										<label for="filter-checkbox-22" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-13" type="checkbox">
+										<label for="filter-checkbox-13" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-14" type="checkbox">
+										<label for="filter-checkbox-14" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-15" type="checkbox">
+										<label for="filter-checkbox-15" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-16" type="checkbox">
+										<label for="filter-checkbox-16" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-17" type="checkbox">
+										<label for="filter-checkbox-17" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+									<div class="form-group checkbox-md">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-18" type="checkbox">
+										<label for="filter-checkbox-18" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="text-center d-block d-md-none mt-4 mb-4">
+								<button class="btn btn-primary btn-large">Применить</button>
+							</div>
+						</form>
+					</div>
+				</div>
 
+				<div class="col-12 col-md-8 col-lg-9">
 					<div class="catalog-panel d-none d-md-block">
 						<div class="row">
 							<div class="col-9 d-flex align-items-center">
@@ -1931,6 +2079,20 @@
 						</div>
 					</div>
 
+					<div class="catalog-panel d-block d-md-none">
+						<div class="row">
+							<div class="col-6 d-flex align-items-center">
+								<select>
+									<option>По умолчанию</option>
+									<option>По возрастанию цены</option>
+								</select>
+							</div>
+							<div class="col-6 d-flex align-items-center">
+								<a href="#" id="filter-form-show">Фильтр</a>
+							</div>
+						</div>
+					</div>
+
 					<div id="catalog-items" class="catalog-items">
 						<div class="item-container">
 							<div class="item item-lg">
@@ -1943,7 +2105,8 @@
 									<div class="col-12 col-12-2">
 										<div class="item-title">
 											<a href="#">Миксер Bosch 5K-SM125EER</a>
-											<p>Максимальная загрузка белья, кг: 8 | Максимальная скорость вращения при отжиме, об/мин: 1400 | Тип управления: Электронн</p>
+											<p>Максимальная загрузка белья, кг: 8 | Максимальная скорость вращения при отжиме, об/мин: 1400 | Тип
+												управления: Электронн</p>
 										</div>
 										<div class="item-rating-price">
 											<div class="item-rating">
@@ -2200,12 +2363,10 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="item-container">
 							<a href="#" id="item-promo-s8" class="item item-promo">
 							</a>
 						</div>
-
 						<div class="item-container">
 							<div class="item">
 								<div class="row">
@@ -2292,7 +2453,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="item-container">
 							<div class="item">
 								<div class="row">
@@ -2379,7 +2539,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="item-container">
 							<div class="item">
 								<div class="row">
@@ -2466,7 +2625,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="item-container">
 							<div class="item">
 								<div class="row">
@@ -2553,7 +2711,6 @@
 								</div>
 							</div>
 						</div>
-
 						<div class="item-container">
 							<div class="item">
 								<div class="row">
@@ -2640,13 +2797,626 @@
 								</div>
 							</div>
 						</div>
+						<div class="item-container">
+							<div class="item item-lg">
+								<div class="row">
+									<div class="col-12 col-12-1 flex align-self-center">
+										<div class="item-image">
+											<a href="#"><img src="images/spec-offer-item.png"></a>
+										</div>
+									</div>
+									<div class="col-12 col-12-2">
+										<div class="item-title">
+											<a href="#">Миксер Bosch 5K-SM125EER</a>
+											<p>Максимальная загрузка белья, кг: 8 | Максимальная скорость вращения при отжиме, об/мин: 1400 | Тип
+												управления: Электронн</p>
+										</div>
+										<div class="item-rating-price">
+											<div class="item-rating">
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-12 col-md-6 align-self-center">
+													<div class="item-price">
+														40 190 kzt
+													</div>
+													<div class="item-old-price">
+														40000
+													</div>
+												</div>
+												<div class="col-12 col-md-6 align-self-center">
+													<div class="row">
+														<div class="col-8">
+															<a href="#" class="btn btn-primary btn-buy">
+																Купить
+															</a>
+														</div>
+														<div class="col-4 align-self-center text-right">
+															<div class="item-compare">
+																<a href="#">
+																	<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+																	 x="0px" y="0px" viewBox="0 0 488.2 488.2" style="enable-background:new 0 0 488.2 488.2;" xml:space="preserve">
+																		<path class="st0" d="M124.6,222.9H12.3c-5.7,0-10.3,4.6-10.3,10.3v229.7c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																										V233.2C134.9,227.5,130.3,222.9,124.6,222.9z M114.3,452.6H22.5V243.4h91.8V452.6z" />
+																		<path class="st0" d="M300.3,15H187.9c-5.6,0.1-10.2,4.7-10.2,10.3v437.6c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																										V25.3C310.6,19.6,306,15,300.3,15z M290,452.7h-91.8V35.6H290V452.7z" />
+																		<path class="st0" d="M486.2,462.8V168.1c0-5.7-4.6-10.3-10.3-10.3H363.6c-5.7,0-10.3,4.6-10.3,10.3v294.8c0,5.7,4.6,10.3,10.3,10.3
+																										h110.3l2-0.1C481.6,473.1,486.2,468.5,486.2,462.8z M465.7,452.7h-91.8V178.4h91.8V452.7z" />
+																	</svg>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="item-container">
+							<div class="item">
+								<div class="row">
+									<div class="col-4 col-md-12  flex align-self-center">
+										<div class="item-image">
+											<a href="#"><img src="images/spec-offer-item.png"></a>
+										</div>
+									</div>
+									<div class="col-8 col-md-12">
+										<div class="item-title"><a href="#">Миксер Bosch 5K-SM125EER</a></div>
+										<div class="item-rating-price">
+											<div class="item-rating">
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																					L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																					l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																					L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																					l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																					L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																					l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																					L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																					l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																					L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																					l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+											</div>
+											<div class="item-price">
+												40 190 kzt
+											</div>
+											<div class="item-old-price">
+												44 000 kzt
+											</div>
+											<div class="row">
+												<div class="col-8">
+													<a href="#" class="btn btn-primary btn-buy">
+														Купить
+													</a>
+												</div>
+												<div class="col-4 align-self-center text-right">
+													<div class="item-compare">
+														<a href="#">
+															<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+															 x="0px" y="0px" viewBox="0 0 488.2 488.2" style="enable-background:new 0 0 488.2 488.2;" xml:space="preserve">
+																<path class="st0" d="M124.6,222.9H12.3c-5.7,0-10.3,4.6-10.3,10.3v229.7c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																							V233.2C134.9,227.5,130.3,222.9,124.6,222.9z M114.3,452.6H22.5V243.4h91.8V452.6z" />
+																<path class="st0" d="M300.3,15H187.9c-5.6,0.1-10.2,4.7-10.2,10.3v437.6c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																							V25.3C310.6,19.6,306,15,300.3,15z M290,452.7h-91.8V35.6H290V452.7z" />
+																<path class="st0" d="M486.2,462.8V168.1c0-5.7-4.6-10.3-10.3-10.3H363.6c-5.7,0-10.3,4.6-10.3,10.3v294.8c0,5.7,4.6,10.3,10.3,10.3
+																							h110.3l2-0.1C481.6,473.1,486.2,468.5,486.2,462.8z M465.7,452.7h-91.8V178.4h91.8V452.7z" />
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-container">
+							<div class="item">
+								<div class="row">
+									<div class="col-4 col-md-12  flex align-self-center">
+										<div class="item-image">
+											<a href="#"><img src="images/spec-offer-item.png"></a>
+										</div>
+									</div>
+									<div class="col-8 col-md-12">
+										<div class="item-title"><a href="#">Миксер Bosch 5K-SM125EER</a></div>
+										<div class="item-rating-price">
+											<div class="item-rating">
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+											</div>
+											<div class="item-price">
+												40 190 kzt
+											</div>
+											<div class="item-old-price">
+												44 000 kzt
+											</div>
+											<div class="row">
+												<div class="col-8">
+													<a href="#" class="btn btn-primary btn-buy">
+														Купить
+													</a>
+												</div>
+												<div class="col-4 align-self-center text-right">
+													<div class="item-compare">
+														<a href="#">
+															<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+															 x="0px" y="0px" viewBox="0 0 488.2 488.2" style="enable-background:new 0 0 488.2 488.2;" xml:space="preserve">
+																<path class="st0" d="M124.6,222.9H12.3c-5.7,0-10.3,4.6-10.3,10.3v229.7c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																								V233.2C134.9,227.5,130.3,222.9,124.6,222.9z M114.3,452.6H22.5V243.4h91.8V452.6z" />
+																<path class="st0" d="M300.3,15H187.9c-5.6,0.1-10.2,4.7-10.2,10.3v437.6c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																								V25.3C310.6,19.6,306,15,300.3,15z M290,452.7h-91.8V35.6H290V452.7z" />
+																<path class="st0" d="M486.2,462.8V168.1c0-5.7-4.6-10.3-10.3-10.3H363.6c-5.7,0-10.3,4.6-10.3,10.3v294.8c0,5.7,4.6,10.3,10.3,10.3
+																								h110.3l2-0.1C481.6,473.1,486.2,468.5,486.2,462.8z M465.7,452.7h-91.8V178.4h91.8V452.7z" />
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-container">
+							<div class="item item-lg">
+								<div class="row">
+									<div class="col-12 col-12-1 flex align-self-center">
+										<div class="item-image">
+											<a href="#"><img src="images/spec-offer-item.png"></a>
+										</div>
+									</div>
+									<div class="col-12 col-12-2">
+										<div class="item-title">
+											<a href="#">Миксер Bosch 5K-SM125EER</a>
+											<p>Максимальная загрузка белья, кг: 8 | Максимальная скорость вращения при отжиме, об/мин: 1400 | Тип
+												управления: Электронн</p>
+										</div>
+										<div class="item-rating-price">
+											<div class="item-rating">
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-12 col-md-6 align-self-center">
+													<div class="item-price">
+														40 190 kzt
+													</div>
+													<div class="item-old-price">
+														40000
+													</div>
+												</div>
+												<div class="col-12 col-md-6 align-self-center">
+													<div class="row">
+														<div class="col-8">
+															<a href="#" class="btn btn-primary btn-buy">
+																Купить
+															</a>
+														</div>
+														<div class="col-4 align-self-center text-right">
+															<div class="item-compare">
+																<a href="#">
+																	<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+																	 x="0px" y="0px" viewBox="0 0 488.2 488.2" style="enable-background:new 0 0 488.2 488.2;" xml:space="preserve">
+																		<path class="st0" d="M124.6,222.9H12.3c-5.7,0-10.3,4.6-10.3,10.3v229.7c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																											V233.2C134.9,227.5,130.3,222.9,124.6,222.9z M114.3,452.6H22.5V243.4h91.8V452.6z" />
+																		<path class="st0" d="M300.3,15H187.9c-5.6,0.1-10.2,4.7-10.2,10.3v437.6c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																											V25.3C310.6,19.6,306,15,300.3,15z M290,452.7h-91.8V35.6H290V452.7z" />
+																		<path class="st0" d="M486.2,462.8V168.1c0-5.7-4.6-10.3-10.3-10.3H363.6c-5.7,0-10.3,4.6-10.3,10.3v294.8c0,5.7,4.6,10.3,10.3,10.3
+																											h110.3l2-0.1C481.6,473.1,486.2,468.5,486.2,462.8z M465.7,452.7h-91.8V178.4h91.8V452.7z" />
+																	</svg>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+						<div class="item-container">
+							<div class="item">
+								<div class="row">
+									<div class="col-4 col-md-12  flex align-self-center">
+										<div class="item-image">
+											<a href="#"><img src="images/spec-offer-item.png"></a>
+										</div>
+									</div>
+									<div class="col-8 col-md-12">
+										<div class="item-title"><a href="#">Миксер Bosch 5K-SM125EER</a></div>
+										<div class="item-rating-price">
+											<div class="item-rating">
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																						L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																						l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+											</div>
+											<div class="item-price">
+												40 190 kzt
+											</div>
+											<div class="item-old-price">
+												44 000 kzt
+											</div>
+											<div class="row">
+												<div class="col-8">
+													<a href="#" class="btn btn-primary btn-buy">
+														Купить
+													</a>
+												</div>
+												<div class="col-4 align-self-center text-right">
+													<div class="item-compare">
+														<a href="#">
+															<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+															 x="0px" y="0px" viewBox="0 0 488.2 488.2" style="enable-background:new 0 0 488.2 488.2;" xml:space="preserve">
+																<path class="st0" d="M124.6,222.9H12.3c-5.7,0-10.3,4.6-10.3,10.3v229.7c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																								V233.2C134.9,227.5,130.3,222.9,124.6,222.9z M114.3,452.6H22.5V243.4h91.8V452.6z" />
+																<path class="st0" d="M300.3,15H187.9c-5.6,0.1-10.2,4.7-10.2,10.3v437.6c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																								V25.3C310.6,19.6,306,15,300.3,15z M290,452.7h-91.8V35.6H290V452.7z" />
+																<path class="st0" d="M486.2,462.8V168.1c0-5.7-4.6-10.3-10.3-10.3H363.6c-5.7,0-10.3,4.6-10.3,10.3v294.8c0,5.7,4.6,10.3,10.3,10.3
+																								h110.3l2-0.1C481.6,473.1,486.2,468.5,486.2,462.8z M465.7,452.7h-91.8V178.4h91.8V452.7z" />
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-container">
+							<div class="item">
+								<div class="row">
+									<div class="col-4 col-md-12  flex align-self-center">
+										<div class="item-image">
+											<a href="#"><img src="images/spec-offer-item.png"></a>
+										</div>
+									</div>
+									<div class="col-8 col-md-12">
+										<div class="item-title"><a href="#">Миксер Bosch 5K-SM125EER</a></div>
+										<div class="item-rating-price">
+											<div class="item-rating">
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star fill">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+												<div class="star">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+													 x="0px" y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+														<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+																							L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+																							l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+													</svg>
+												</div>
+											</div>
+											<div class="item-price">
+												40 190 kzt
+											</div>
+											<div class="item-old-price">
+												44 000 kzt
+											</div>
+											<div class="row">
+												<div class="col-8">
+													<a href="#" class="btn btn-primary btn-buy">
+														Купить
+													</a>
+												</div>
+												<div class="col-4 align-self-center text-right">
+													<div class="item-compare">
+														<a href="#">
+															<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+															 x="0px" y="0px" viewBox="0 0 488.2 488.2" style="enable-background:new 0 0 488.2 488.2;" xml:space="preserve">
+																<path class="st0" d="M124.6,222.9H12.3c-5.7,0-10.3,4.6-10.3,10.3v229.7c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																									V233.2C134.9,227.5,130.3,222.9,124.6,222.9z M114.3,452.6H22.5V243.4h91.8V452.6z" />
+																<path class="st0" d="M300.3,15H187.9c-5.6,0.1-10.2,4.7-10.2,10.3v437.6c0,5.7,4.6,10.3,10.3,10.3h112.3c5.7,0,10.3-4.6,10.3-10.3
+																									V25.3C310.6,19.6,306,15,300.3,15z M290,452.7h-91.8V35.6H290V452.7z" />
+																<path class="st0" d="M486.2,462.8V168.1c0-5.7-4.6-10.3-10.3-10.3H363.6c-5.7,0-10.3,4.6-10.3,10.3v294.8c0,5.7,4.6,10.3,10.3,10.3
+																									h110.3l2-0.1C481.6,473.1,486.2,468.5,486.2,462.8z M465.7,452.7h-91.8V178.4h91.8V452.7z" />
+															</svg>
+														</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="catalog-pagination">
+						<div class="row clearfix">
+							<div class="col-12 col-lg-5">
+								<nav>
+									<ul class="pagination justify-content-start show-by">
+										<li class="page-item">Показывать по:</li>
+										<li class="page-item">
+											<a class="" href="#" tabindex="-1">15</a>
+										</li>
+										<li class="page-item active">30</li>
+										<li class="page-item">
+											<a class="" href="#" tabindex="-1">50</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<div class="col-12 col-lg-7 text-center-sm text-center-md text-right">
+								<nav>
+									<ul class="pagination justify-content-end">
+										<li class="page-item flex-fill-md">
+											<a class="" href="#" tabindex="-1">
+												<span class="d-none d-md-inline">Предыдущая</span>
+												<span class="d-inline d-md-none">
+													<i class="fas fa-chevron-left"></i>
+												</span></a>
+										</li>
+										<li class="page-item flex-fill-md active">1</li>
+										<li class="page-item flex-fill-md"><a class="" href="#">2</a></li>
+										<li class="page-item flex-fill-md"><a class="" href="#">3</a></li>
+										<li class="page-item flex-fill-md"><a class="" href="#">4</a></li>
+										<li class="page-item flex-fill-md"><a class="" href="#">5</a></li>
+										<li class="page-item flex-fill-md"><a class="" href="#">6</a></li>
+										<li class="page-item flex-fill-md"><a class="" href="#">7</a></li>
+										<li class="page-item flex-fill-md">
+											<a class="" href="#">
+												<span class="d-none d-md-inline">Следующая</span>
+												<span class="d-inline d-md-none">
+													<i class="fas fa-chevron-right"></i>
+												</span></a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+					<div class="">
+						<div class="row">
+							<div class="col-12 col-lg-6">
+								<div class="catalog-description">
+									<h6 class="bold">Купить холодильники в Алматы онлайн теперь предлагаем вам мы! </h6>
 
+									<p>Наша компания создала такой онлайн портал, который
+										делает приобретение техники одним сплошным удовольствием. Продажа холодильников в Казахстане -
+										дело привычное для большинства технических точек.
+										Но с нами иметь дело настолько выгодно, что вы забудете
+										о других магазинах. </p>
+								</div>
+
+
+
+
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="catalog-description">
+									<h6 class="bold">Купить холодильники в Алматы онлайн теперь предлагаем вам мы! </h6>
+
+									<p>Наша компания создала такой онлайн портал, который
+										делает приобретение техники одним сплошным удовольствием. Продажа холодильников в Казахстане -
+										дело привычное для большинства технических точек.
+										Но с нами иметь дело настолько выгодно, что вы забудете
+										о других магазинах. </p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
+
 
 
 	<div class="footer">
@@ -2811,6 +3581,8 @@
 		</div>
 	</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/jquery-ui-slider-pips.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.selectric.js"></script>

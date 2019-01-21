@@ -187,4 +187,38 @@ $(document).ready(function () {
 
 
   $('select').selectric();
+
+
+  $("#slider-range").slider({
+    range: true,
+    min: 0,
+    max: 999999,
+    values: [1, 999999],
+    slide: function (event, ui) {
+      $("#slider-range-amount-1").text(ui.values[0] + " тг");
+      $("#slider-range-amount-2").text(ui.values[1] + " тг");
+    }
+  }).slider("float");
+  $("#slider-range-amount-1").text($("#slider-range").slider("values", 0) + " тг");
+  $("#slider-range-amount-2").text($("#slider-range").slider("values", 1) + " тг");
+
+  $("#filter-form-show").click(function () {
+    $("#filter-form").slideToggle()
+    return;
+  });
+
+  $("#filter-form-hide").click(function () {
+    $("#filter-form").slideToggle()
+    return;
+  })
+
+  $(document).click(function (event) {
+    if ((!$(event.target).is("#filter-form, #filter-form *, #filter-form-show")) && ($("#filter-form").css("display") == "block")) {
+      $("#filter-form").slideToggle();
+    }
+  });
+
+
+
+
 });
