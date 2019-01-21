@@ -3130,18 +3130,24 @@ ul.list.dashed li {
     margin-top: 40px;
 }
 
+@media screen and (min-width: 768px) {
+    #filter-form {
+        display: block!important;
+    }
+}
+
 @media screen and (max-width: 767px) {
     #filter-form {
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
-        z-index: 3;
+        z-index: 20;
         background-color: #fff;
         display: none;
     }
     .filter-heading {
-        border-bottom: 1px solid  #ebebeb;
+        border-bottom: 1px solid #ebebeb;
         margin-bottom: 0;
         line-height: 1;
         padding: 11px;
@@ -3155,7 +3161,7 @@ ul.list.dashed li {
         text-decoration: none;
     }
     .filter-collapse-link {
-        border-bottom: 1px solid  #ebebeb;
+        border-bottom: 1px solid #ebebeb;
         margin-bottom: 0;
         color: #000;
         font-size: 1.28rem;
@@ -3179,14 +3185,14 @@ ul.list.dashed li {
     #slider-range {
         margin-top: 24px;
     }
-    .filter-collapse-link{
+    .filter-collapse-link {
         position: relative;
     }
     .filter-collapse-link::after {
         content: " ";
-        display:block;
+        display: block;
         position: absolute;
-        top:calc(50% - 8px);
+        top: calc(50% - 8px);
         right: 8px;
         width: 16px;
         height: 16px;
@@ -3198,4 +3204,3 @@ ul.list.dashed li {
         background-image: url("img/add.svg");
     }
 }
-
