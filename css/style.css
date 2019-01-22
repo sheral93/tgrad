@@ -2459,6 +2459,7 @@ a.slide-btn {
 
 .main {
     margin-top: 30px;
+    position: relative;
 }
 
 .catalog-items .item.item-promo {
@@ -3203,4 +3204,29 @@ ul.list.dashed li {
     .filter-collapse-link.collapsed::after {
         background-image: url("img/add.svg");
     }
+    .position-static {
+        position: stat
+    }
+}
+
+.catalog-panel-mobile .selectric-wrapper {
+    margin: 0;
+    width: 100%;
+}
+
+.catalog-panel-mobile .selectric-wrapper {
+    margin: 0;
+    width: 100%;
+}
+
+.catalog-panel-mobile .selectric {
+    border: none;
+    border-right: 1px solid #ebebeb;
+    border-radius: 0;
+    width: 100%;
+    color: #626262;
+}
+
+.catalog-panel-mobile a {
+    color: #626262;
 }
