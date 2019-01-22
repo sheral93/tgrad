@@ -1891,17 +1891,20 @@
 					<div id="filter-form">
 						<form class="font-size-075">
 							<div class="filter-heading d-block d-md-none">
-								<div class="row">
-									<div class="col-4 flex align-self-center text-left">
-										<a href="#" id="filter-form-hide">Назад</a>
-									</div>
-									<div class="col-4 flex align-self-center text-center">
-										<h5 class="mb-0">Фильтр</h5>
-									</div>
-									<div class="col-4 flex align-self-center text-right">
-										<a href="#" id="filter-form-hide">Сбросить</a>
+								<div class="row-container">
+									<div class="row">
+										<div class="col-4 flex align-self-center text-center">
+											<a href="#" id="filter-form-hide">Назад</a>
+										</div>
+										<div class="col-4 flex align-self-center text-center">
+											<h5 class="mb-0">Фильтр</h5>
+										</div>
+										<div class="col-4 flex align-self-center text-center">
+											<a href="#" class="filter-form-reset">Сбросить</a>
+										</div>
 									</div>
 								</div>
+
 							</div>
 							<div class="filter-section">
 								<h5 class="h5 d-none d-md-block">Тип</h5>
@@ -1944,22 +1947,22 @@
 										</label>
 									</div>
 									<div class="form-group checkbox-md">
-										<input class="styled-checkbox form-check-input" id="filter-checkbox-6" type="checkbox">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-7" type="checkbox">
 										<label for="filter-checkbox-7" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
 										</label>
 									</div>
 									<div class="form-group checkbox-md">
-										<input class="styled-checkbox form-check-input" id="filter-checkbox-7" type="checkbox">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-8" type="checkbox">
 										<label for="filter-checkbox-8" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
 										</label>
 									</div>
 									<div class="form-group checkbox-md">
-										<input class="styled-checkbox form-check-input" id="filter-checkbox-8" type="checkbox">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-9" type="checkbox">
 										<label for="filter-checkbox-9" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
 										</label>
 									</div>
 									<div class="form-group checkbox-md">
-										<input class="styled-checkbox form-check-input" id="filter-checkbox-9" type="checkbox">
+										<input class="styled-checkbox form-check-input" id="filter-checkbox-10" type="checkbox">
 										<label for="filter-checkbox-10" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
 										</label>
 									</div>
@@ -1970,10 +1973,12 @@
 								<a href="#fitlerPriceCollapse" data-toggle="collapse" data-target="#fitlerPriceCollapse" class="d-block d-md-none mb-0 filter-collapse-link collapsed">Цена</a>
 								<div class="collapse dont-collapse-md" id="fitlerPriceCollapse">
 									<div class="form-group checkbox-md">
-										<div id="slider-range"></div>
-										<div class="row">
-											<div class="col-6 pr-0 font-626262 mt-3">от <span id="slider-range-amount-1"></span></div>
-											<div class="col-6 pl-0 text-right font-626262 mt-3">до <span id="slider-range-amount-2"></span></div>
+										<div class="price-range">
+											<div id="slider-range"></div>
+											<div class="row">
+												<div class="col-6 pr-0 font-626262 mt-3">от <span id="slider-range-amount-1"></span></div>
+												<div class="col-6 pl-0 text-right font-626262 mt-3">до <span id="slider-range-amount-2"></span></div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -1989,7 +1994,7 @@
 									</div>
 									<div class="form-group checkbox-md">
 										<input class="styled-checkbox form-check-input" id="filter-checkbox-12" type="checkbox">
-										<label for="filter-checkbox-22" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
+										<label for="filter-checkbox-12" class="form-check-label font-626262">ЖК телевизоры <span class="font-cccccc">(3)</span></label>
 										</label>
 									</div>
 									<div class="form-group checkbox-md">
@@ -3583,10 +3588,11 @@
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="js/jquery-ui-slider-pips.js"></script>
+	<script src="js/jquery.ui.touch-punch.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.selectric.js"></script>
-	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 

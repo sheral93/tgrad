@@ -218,6 +218,10 @@ $(document).ready(function () {
     }
   });
 
+  $('.filter-form-reset').click(function(){
+    $('#filter-form form').trigger('reset');
+  });
+
 
 
 
