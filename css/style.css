@@ -2449,7 +2449,7 @@ a.slide-btn {
 }
 
 .catalog-items {
-    margin: -9px;
+    margin: -8px;
 }
 
 .catalog-items .item {
@@ -2475,13 +2475,13 @@ a.slide-btn {
 
 @media screen and (min-width: 768px) {
     .catalog-items .item {
-        width: 218px;
+        width: 217px;
     }
     .catalog-items .item.item-lg {
-        width: 452px;
+        width: 451px;
     }
     .catalog-items .item.item-promo {
-        width: 452px;
+        width: 451px;
     }
     .main {
         margin-top: 0;
