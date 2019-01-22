@@ -3084,6 +3084,7 @@ ul.list.dashed li {
     background-color: #585ed9;
     border: 1px solid #ffffff;
     top: -4px;
+    cursor: pointer;
 }
 
 .ui-slider-float .ui-slider-tip:before, .ui-slider-float .ui-slider-pip .ui-slider-tip-label:before {
@@ -3125,6 +3126,9 @@ ul.list.dashed li {
         height: auto !important;
         visibility: visible;
     }
+    .price-range {
+        max-width: 180px;
+    }
 }
 
 #slider-range {
@@ -3151,7 +3155,7 @@ ul.list.dashed li {
         border-bottom: 1px solid #ebebeb;
         margin-bottom: 0;
         line-height: 1;
-        padding: 11px;
+        padding: 11px 15px;
         font-size: .86rem;
     }
     .filter-heading h5 {
@@ -3194,7 +3198,7 @@ ul.list.dashed li {
         display: block;
         position: absolute;
         top: calc(50% - 8px);
-        right: 8px;
+        right: 13px;
         width: 16px;
         height: 16px;
         background: url("img/minus.svg");
