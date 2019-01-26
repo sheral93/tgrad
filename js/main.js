@@ -185,40 +185,78 @@ $(document).ready(function () {
     return false;
   });
 
-
   $('select').selectric();
 
-
-  $("#slider-range").slider({
-    range: true,
-    min: 0,
-    max: 999999,
-    values: [1, 999999],
-    slide: function (event, ui) {
-      $("#slider-range-amount-1").text(ui.values[0] + " тг");
-      $("#slider-range-amount-2").text(ui.values[1] + " тг");
-    }
-  }).slider("float");
-  $("#slider-range-amount-1").text($("#slider-range").slider("values", 0) + " тг");
-  $("#slider-range-amount-2").text($("#slider-range").slider("values", 1) + " тг");
-
   $("#filter-form-show").click(function () {
-    $("#filter-form").slideToggle()
+    $("#filter-form").slideDown()
     return;
   });
 
   $("#filter-form-hide").click(function () {
-    $("#filter-form").slideToggle()
+    $("#filter-form").slideUp()
     return;
   })
 
   $(document).click(function (event) {
     if ((!$(event.target).is("#filter-form, #filter-form *, #filter-form-show")) && ($("#filter-form").css("display") == "block")) {
-      $("#filter-form").slideToggle();
+      $("#filter-form").slideUp();
     }
   });
 
+  $('.filter-form-reset').click(function () {
+    $('#filter-form form').trigger('reset');
+    $("#slider-range").slider("values", 0, $("#slider-range").slider("option", "min"));
+    $("#slider-range").slider("values", 1, $("#slider-range").slider("option", "max"));
+    $("#slider-range-amount-1").text($("#slider-range").slider("values", 0) + " тг");
+    $("#slider-range-amount-2").text($("#slider-range").slider("values", 1) + " тг");
+    $("#slider-range-input-1").val($("#slider-range").slider("values", 0));
+    $("#slider-range-input-2").val($("#slider-range").slider("values", 1));
+  });
 
 
+  if ($(".spinner").length > 0) {
+    $(".spinner").spinner({
+      min: 1,
+      incremental: false
+    });
 
+    $('.spinner').bind('keypress', function (e) {
+      var keyCode = (e.which) ? e.which : event.keyCode
+      return !(keyCode > 31 && (keyCode < 48 || keyCode > 57));
+    });
+  }
+
+  $(".youtube-modal").on('hidden.bs.modal', function (e) {
+    $(".youtube-modal iframe").attr("src", $(".youtube-modal iframe").attr("src"));
+  });
+
+  $("#legal-entity-checkbox").change(function () {
+    if ($(this).is(':checked')) {
+      $("#legal-entity-form").show();
+      $("#individual-form").hide();
+    }
+  });
+
+  $("#individual-checkbox").change(function () {
+    if ($(this).is(':checked')) {
+      $("#legal-entity-form").hide();
+      $("#individual-form").show();
+    }
+  });
+
+  $("#delivery").change(function () {
+    if ($(this).is(':checked')) {
+      $("#delivery-address").show();
+    }
+  });
+
+  $("#pickup").change(function () {
+    if ($(this).is(':checked')) {
+      $("#delivery-address").hide();
+
+    }
+  });
 });
+
+
+
