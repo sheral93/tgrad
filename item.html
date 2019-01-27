@@ -1901,39 +1901,6 @@
 									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
 										<img src="images/item-3.png" />
 									</li>
-									<li data-thumb="images/item-2-thumb.png" data-src="images/item-2.png">
-										<img src="images/item-2.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
-									<li data-thumb="images/item-3-thumb.png" data-src="images/item-3.png">
-										<img src="images/item-3.png" />
-									</li>
 								</ul>
 								<div id="item-galery-counter" class="item-galery-counter">
 								</div>
@@ -1976,10 +1943,10 @@
 								enableDrag: true,
 								controls: false,
 								onBeforeSlide: function (el) {
-									$("#item-galery-counter").html(lightSlider.getCurrentSlideCount() + '/' + $('#lightSlider').children().length);
+									$("#item-galery-counter").html(lightSlider.getCurrentSlideCount() + '/' + ($('#lightSlider > li').length - 2));
 								},
 								onSliderLoad: function (el) {
-									$("#item-galery-counter").html(lightSlider.getCurrentSlideCount() + '/' + $('#lightSlider').children().length);
+									$("#item-galery-counter").html(lightSlider.getCurrentSlideCount() + '/' + ($('#lightSlider > li').length - 2));
 									$('#item-galery').css("visibility", "visible");
 								}
 							});
@@ -1987,7 +1954,95 @@
 					</script>
 				</div>
 				<div class="col-12 col-lg-6">
-					<h2 class="medium">Телевизоры <span class="color-grey">(213)</span></h2>
+					<div class="item-description">
+						<div class="row font-size-075 font-626262 medium">
+							<div class="col-5">
+								Код товара: 352
+							</div>
+							<div class="col-7 text-right">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23px" height="15px">
+									<path fill-rule="evenodd" fill="rgb(218, 107, 110)" d="M20.388,14.182 L19.366,14.182 L19.366,13.855 C19.366,12.413 18.179,11.242 16.719,11.242 C15.259,11.242 14.071,12.413 14.071,13.855 L14.071,14.182 L8.810,14.182 L8.810,13.855 C8.810,12.413 7.623,11.242 6.162,11.242 C4.702,11.242 3.516,12.413 3.516,13.855 L3.516,14.182 L2.523,14.182 C1.951,14.182 0.869,13.774 0.869,12.222 L0.869,7.685 L9.502,7.685 L9.502,9.493 C9.545,9.497 9.585,9.481 9.615,9.452 L12.547,6.553 C12.574,6.527 12.590,6.490 12.590,6.451 C12.590,6.413 12.574,6.377 12.549,6.350 L9.614,3.455 C9.573,3.413 9.532,3.412 9.502,3.412 L9.502,5.240 L0.869,5.240 L0.869,1.771 C0.869,0.566 1.663,0.135 2.407,0.135 C2.504,0.135 2.565,0.143 2.565,0.143 L14.042,0.139 C16.140,0.139 17.869,2.055 19.324,3.852 C20.082,4.786 22.044,7.640 22.044,9.610 L22.044,12.549 C22.044,13.450 21.302,14.182 20.388,14.182 ZM21.381,9.610 C21.381,8.111 19.877,5.581 18.808,4.260 C17.449,2.583 15.847,0.791 14.042,0.791 L2.523,0.791 C2.477,0.790 2.449,0.789 2.407,0.789 C2.009,0.789 1.531,0.957 1.531,1.771 L1.531,4.587 L8.841,4.587 L8.841,3.089 L8.935,2.994 C9.242,2.691 9.774,2.691 10.082,2.990 L13.014,5.888 C13.167,6.035 13.251,6.238 13.251,6.451 C13.251,6.665 13.167,6.868 13.014,7.017 L10.083,9.914 C9.778,10.214 9.242,10.214 8.937,9.914 L8.841,9.819 L8.841,8.337 L1.531,8.337 L1.531,12.222 C1.531,13.512 2.484,13.530 2.523,13.530 L2.871,13.530 C3.036,11.880 4.451,10.590 6.162,10.590 C7.875,10.590 9.289,11.880 9.455,13.530 L13.425,13.530 C13.592,11.880 15.007,10.590 16.719,10.590 C18.431,10.590 19.843,11.880 20.011,13.530 L20.388,13.530 C20.937,13.530 21.381,13.088 21.381,12.549 L21.381,9.610 Z" />
+								</svg>
+								Бесплатная доставка
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-8">
+								<h1 class="title">Холодильник Samsung RS7768FHCSR/WT</h1>
+							</div>
+						</div>
+						<div class="rating">
+							<div class="star fill">
+								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+								 y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+									<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+												L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+												l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+								</svg>
+							</div>
+							<div class="star fill">
+								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+								 y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+									<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+												L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+												l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+								</svg>
+							</div>
+							<div class="star fill">
+								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+								 y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+									<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+												L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+												l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+								</svg>
+							</div>
+							<div class="star">
+								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+								 y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+									<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+												L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+												l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+								</svg>
+							</div>
+							<div class="star">
+								<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+								 y="0px" viewBox="0 0 55.9 53.2" style="enable-background:new 0 0 55.9 53.2;" xml:space="preserve">
+									<path class="st0" d="M55.8,20.3c-0.1-0.4-0.4-0.6-0.8-0.7l-18.1-2.6L28.8,0.6C28.7,0.2,28.3,0,27.9,0S27.2,0.2,27,0.6L18.9,17
+												L0.9,19.6c-0.4,0.1-0.7,0.3-0.8,0.7c-0.1,0.4,0,0.8,0.3,1L13.4,34l-3.1,18c-0.1,0.4,0.1,0.8,0.4,1c0.3,0.2,0.7,0.3,1.1,0.1l16.2-8.5
+												l16.2,8.5c0.1,0.1,0.3,0.1,0.5,0.1c0.2,0,0.4-0.1,0.6-0.2c0.3-0.2,0.5-0.6,0.4-1l-3.1-18l13.1-12.8C55.8,21,55.9,20.6,55.8,20.3z" />
+								</svg>
+							</div>
+							<div class="reviews-number">
+								17 отзывов
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<div class="price">40 190 kzt</div>
+								<div class="old-price">30 190 kzt</div>
+							</div>
+							<div class="col-6 align-self-center text-right pr-0 pl-0">
+								<div class="guarantee">
+									Гарантия 1 год
+								</div>
+							</div>
+						</div>
+						<p>
+							Описание:<br />
+							Разрешение экрана: 1366x768 HD Ready <br />
+							Поддержка технологии "SMART TV": нет <br />
+							Поддержка 3D: нет <br />
+							Тип матрицы дисплея: LED <br />
+							Тип экрана: Прямой <br />
+							Операционная система: Tizen <br />
+							Формат крепления VESA: 100х100 мм <br />
+							Диагональ экрана: 81 см<br />
+						</p>
+						<a href="#" class="btn btn-primary btn-buy">Купить</a>
+						<a href="#"><img src="images/kaspi-button.png" alt="" class="d-none d-md-inline"></a>
+						<a href="#"><img src="images/kaspi-button-small.png" alt="" class="d-inline d-md-none"></a>
+					</div>
+
 				</div>
 			</div>
 		</div>

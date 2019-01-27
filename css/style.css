@@ -92,6 +92,10 @@ body.body-404 {
     font-weight: 600;
 }
 
+.medium {
+    font-weight: 500;
+}
+
 @media screen and (max-width: 767px) {
     .container {
         width: 320px;
@@ -2713,6 +2717,10 @@ a.slide-btn {
     font-size: 1rem;
 }
 
+.font-size-1375 {
+    font-size: 1.375rem;
+}
+
 .font-size-1125 {
     font-size: 1.125rem;
 }
@@ -4414,6 +4422,7 @@ a.secondary svg .st0 {
 .item-galery-counter {
     display: none;
 }
+
 .share {
     display: none;
 }
@@ -4445,7 +4454,7 @@ a.secondary svg .st0 {
     }
     .item-galery {
         padding-bottom: 40px;
-        border-bottom: 1px solid  #ebebeb;
+        border-bottom: 1px solid #ebebeb;
     }
     .share {
         background-color: #999999;
@@ -4460,10 +4469,104 @@ a.secondary svg .st0 {
         width: 16px;
         height: 16px;
     }
-    .share svg .st0{
+    .share svg .st0 {
         fill: #ffffff;
     }
     .lSSlideWrapper {
         margin-bottom: 0;
+    }
+    .item-galery {
+        margin: 0;
+    }
+}
+
+.item-description {
+    margin: 20px 0 0;
+}
+
+.item-description .title {
+    margin: 20px 0;
+    font-size: 1.375rem;
+}
+
+
+.item-description .title {
+    margin: 20px 0;
+    font-size: 1.375rem;
+}
+
+.item-description .reviews-number {
+    color: #939393;
+    font-size: 0.75rem;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 10px;
+}
+
+.item-description .rating .star {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1px;
+}
+
+.item-description .rating .star svg {
+    height: 13px;
+}
+
+.item-description .rating .star svg .st0 {
+    fill: #e7e8ff;
+}
+
+.item-description .rating .star.fill svg .st0 {
+    fill: #414487;
+}
+
+.guarantee {
+    background-image: url("img/guarantee.svg");
+    height: 50px;
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    padding-left: 65px;
+    color: #595959;
+    padding-top: 15px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.item-description .price {
+    font-size: 1.5625rem;
+    font-weight: 700;
+    margin-top: 20px;
+    color: #000;
+}
+
+.item-description .old-price {
+    color: #e65a64;
+    font-size: 1.125rem;
+    font-weight: 500;
+    text-decoration: line-through;
+    margin: 10px 0;
+}
+
+.item-description {
+    color: #595959;
+    font-size: .875rem;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.item-description a.btn.btn-buy{
+    width: 185px;
+    background-position-x: 50px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .item-description a.btn.btn-buy{
+        width: 135px;
+        background-position-x: 25px;
     }
 }
