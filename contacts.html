@@ -1890,17 +1890,35 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="contacts-map">
-
-						<a class="dg-widget-link" href="http://2gis.kz/aktau/firm/70000001028464931/center/51.167857646942146,43.670867185335524/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть
-							на карте Актау</a>
-						<div class="dg-widget-link"><a href="http://2gis.kz/aktau/firm/70000001028464931/photos/70000001028464931/center/51.167857646942146,43.670867185335524/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии
-								компании</a></div>
-						<div class="dg-widget-link"><a href="http://2gis.kz/aktau/center/51.167858,43.670555/zoom/16/routeTab/rsType/bus/to/51.167858,43.670555╎Camellia, центр цветов?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти
-								проезд до Camellia, центр цветов</a></div>
-						<script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
-						<script charset="utf-8">new DGWidgetLoader({ "width": 640, "height": 407, "borderColor": "#a3a3a3", "pos": { "lat": 43.670867185335524, "lon": 51.167857646942146, "zoom": 16 }, "opt": { "city": "aktau" }, "org": [{ "id": "70000001028464931" }] });</script><noscript
-						 style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в
-							настройках вашего браузера.</noscript>
+						<div class="map">
+							<div id="map_canvas" class="map-canvas"></div>
+						</div>
+						<script src="http://maps.api.2gis.ru/2.0/loader.js"></script>
+						<script>
+							DG.then(function () {
+								var my_map,
+									my_popup,
+									my_marker,
+									my_coords = [56.51981268504425, 85.04803529200107]; // Your cordinates
+								my_map = DG.map('map_canvas', {
+									center: my_coords,
+									zoom: 16,
+									scrollWheelZoom: false
+								});
+								my_popup = DG.popup({
+									sprawling: true
+								})
+									.setLatLng(my_coords)
+									.setContent('<div style="font-size: 18px; text-align: center;"><strong>Subject</strong><br><span style="font-size: 14px;">Text text text text text text text text text</span></div>')
+									.openOn(my_map);
+								my_marker = DG.marker(my_coords, {
+									label: 'Click it :)'
+								})
+									.addTo(my_map)
+									.bindPopup(my_popup)
+									.openPopup(my_popup);
+							});
+						</script>
 					</div>
 				</div>
 			</div>
@@ -1926,8 +1944,8 @@
 				<div class="col-12 col-md-4">
 					<h6 class="d-none d-md-block">&nbsp;</h6>
 					<p class="whatsapp font-size-1125">
-							+7 (727) 345 40 58</br>
-							+7 (701) 997 42 32
+						+7 (727) 345 40 58</br>
+						+7 (701) 997 42 32
 					</p>
 				</div>
 			</div>
