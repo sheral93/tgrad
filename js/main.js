@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   $('.mobile-menu .dropdown-submenu a').on('click', function (e) {
     var show = false;
     if ($(this).parent().hasClass('show')) {
@@ -256,6 +255,107 @@ $(document).ready(function () {
 
     }
   });
+
+  var timeoutID;
+  var fadeSearhForm = false;
+  var searchFormFaded = false;
+
+  $("#search-form input").keydown(function () {
+    var dInput = $(this).val();
+    if (dInput === '') {
+      $("#search-fade").stop().fadeIn();
+    }
+  });
+
+  $("#search-form input").keyup(function () {
+    var dInput = $(this).val();
+    $("#search-form-mobile input").val($(this).val());
+    if (dInput === '') {
+      $("#search-fade").stop().fadeOut();
+    }
+  });
+
+  $("#search-form-mobile input").keydown(function () {
+    var dInput = $(this).val();
+    if (dInput === '') {
+      $("#search-fade").stop().fadeIn();
+    }
+  });
+
+  $("#search-form-mobile input").keyup(function () {
+    var dInput = $(this).val();
+    $("#search-form input").val($(this).val());
+    if (dInput === '') {
+      $("#search-fade").stop().fadeOut();
+    }
+  });
+
+  $("#search-form-mobile").focusin(function () {
+    $("body").addClass("search-shown")
+    $("#search-form-mobile").stop().animate({
+      height: 43
+    }, 300);
+    $("#show-search-form").hide()
+  });
+
+  $("#search-form-mobile").focusout(function () {
+    if ($(window).scrollTop() > 0) {
+      $("#search-fade").stop().fadeOut();
+      $("#search-form-mobile input").val('');
+      $("body").removeClass("search-shown")
+      $("#search-form-mobile").stop().animate({
+        height: 0
+      }, 100);
+      $("#show-search-form").show()
+    }
+  });
+
+  $("#show-search-form").click(function () {
+    $("body").addClass("search-shown")
+    $("#search-form-mobile").stop().animate({
+      height: 43
+    }, 300);
+    $("#search-form-mobile input").focus()
+    $("#show-search-form").hide()
+    return false;
+  });
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 0) {
+      if ($("#search-form-mobile input").eq(0).is(":focus")) {
+        $("#search-form-mobile input").blur()
+        $("#search-form input").val('');
+      }
+      $("body").removeClass("search-shown")
+      $("#search-form-mobile").stop().animate({
+        height: 0
+      }, 0);
+      $("#show-search-form").show()
+    }
+    else {
+      $("body").addClass("search-shown")
+      $("#search-form-mobile").stop().animate({
+        height: 43
+      }, 300);
+      $("#show-search-form").hide()
+    }
+  });
+
+  if ($(this).scrollTop() > 0) {
+    $("#search-fade").stop().fadeOut();
+    $("body").removeClass("search-shown")
+    $("#search-form-mobile").stop().animate({
+      height: 0
+    }, 0);
+    $("#show-search-form").show()
+  }
+  else {
+    $("body").addClass("search-shown")
+    $("#search-form-mobile").stop().animate({
+      height: 43
+    }, 300);
+    $("#show-search-form").hide()
+  }
 });
 
 

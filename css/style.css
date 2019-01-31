@@ -52,6 +52,7 @@
 
 html {
     font-size: 16px;
+    min-width: 320px;
 }
 
 @media screen and (max-width: 767px) {
@@ -65,6 +66,7 @@ body {
     position: relative;
     color: #000000;
     line-height: 1.2;
+    min-width: 320px;
 }
 
 body.body-404 {
@@ -655,6 +657,31 @@ a.no-underline {
 .header {
     background-color: #474baf;
     color: #c1c3ee;
+    z-index: 2;
+    position: relative;
+}
+
+@media screen and (max-width: 991px) {
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        height: 48px;
+        min-width: 320px;
+        transition: height .2s ease;
+    }
+    body {
+        margin-top: 48px;
+    }
+    body.search-shown .header {
+        height: 92px;
+    }
+    body.search-shown {
+        transition: margin-top .2s ease;
+        margin-top: 92px;
+    }
 }
 
 .header a {
@@ -969,6 +996,25 @@ a.no-underline {
     width: 17px;
     height: 17px;
     background-image: url(img/phone.svg);
+    background-size: auto 17px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header .search-sm {
+    float: right;
+    margin: 14px 0 0 20px;
+    display: block;
+    width: 17px;
+    height: 17px;
+}
+
+.header .search-sm {
+    display: block;
+    position: relative;
+    width: 17px;
+    height: 17px;
+    background-image: url(img/search-white.svg);
     background-size: auto 17px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1358,7 +1404,11 @@ a.no-underline {
 }
 
 .mobile-menu {
-    margin: 0 -18px;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    left: 0;
+    right: 0;
 }
 
 .slider {
@@ -4894,4 +4944,89 @@ a.btn-vk svg {
 
 a.btn-fb svg .st0 {
     fill: #ffffff;
+}
+
+.search-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    z-index: 100;
+    opacity: .7;
+    display: none;
+}
+
+#search-form-mobile {
+    height: 0;
+    overflow: hidden;
+}
+
+@media (min-width: 991px) {
+    #search-form-mobile {
+        height: 0!important;
+    }
+}
+
+.mobile-menu-top {
+    background-color: #474baf;
+    padding: 19px 24px;
+}
+
+.mobile-menu-top .phone {
+    float: none;
+    background-image: url(img/phone.svg);
+    background-size: auto 15px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    padding-top: 0px;
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 0;
+}
+
+.mobile-menu-top .phone span {
+    font-size: 16px;
+}
+
+.mobile-menu-top .graphic-1 {
+    float: none;
+    margin-left: 0;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.mobile-menu-top .graphic-2 {
+    float: none;
+    margin-left: 0;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+.mobile-menu-close {
+    color: #c1c3ee;
+    font-size: 10px;
+    position: absolute;
+    right: 24px;
+    top: 21px;
+    z-index: 4;
+    line-height: 14px;
+    height: 14px;
+    display: inline-block
+}
+
+.mobile-menu-close svg {
+    width: 14px;
+    vertical-align: bottom;
+}
+
+.mobile-menu-close svg .st0 {
+    fill: #c1c3ee;
+}
+
+.mobile-menu-close:hover svg .st0 {
+    fill: #e65a64;
 }

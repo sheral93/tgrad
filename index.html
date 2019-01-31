@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="search-shown">
 	<div class="header">
 		<div class="container">
 			<div class="header-container d-none d-lg-block">
@@ -142,15 +142,15 @@
 					<div class="phone">
 						+7 (727) <span>349 48 79</span>
 					</div>
-					<div class="search-form">
-						<div class="input-group">
+					<form class="search-form">
+						<div id="search-form" class="input-group">
 							<input type="text" class="form-control" placeholder="Поиск: введите искомое например телевизоры Sony" aria-label=""
 							 aria-describedby="basic-addon1">
 							<div class="input-group-append">
-								<button class="btn" type="button"></button>
+								<button class="btn" type="submit"></button>
 							</div>
 						</div>
-					</div>
+					</form>
 					<div class="cart">
 						<a href="cart.html">
 							<div class="badge-sm">5</div>
@@ -882,8 +882,8 @@
 							</div>
 						</div>
 						<p>
-							<input class="styled-checkbox form-check-input" id="styled-checkbox-1" type="checkbox" value="value1">
-							<label for="styled-checkbox-1" class="form-check-label">Запомнить меня</label>
+							<input class="styled-checkbox form-check-input" id="styled-checkbox-2" type="checkbox" value="value1">
+							<label for="styled-checkbox-2" class="form-check-label">Запомнить меня</label>
 							</label>
 						</p>
 						<p class="text-center">
@@ -944,8 +944,32 @@
 					</div>
 				</div>
 			</div>
+			<a id="show-search-form" href="#" class="search-sm"></a>
 			<div class="phone-sm"><a href="#"></a></div>
 			<div class="collapse navbar-collapse mobile-menu" id="navbarSupportedContent">
+				<div class="mobile-menu-top">
+					<a href="#" class="mobile-menu-close" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					 aria-expanded="false" aria-label="Toggle navigation">Закрыть
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink"
+						 enable-background="new 0 0 15.642 15.642">
+							<path class="st0" fill-rule="evenodd" d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061  c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061  l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541  l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z" />
+						</svg>
+
+					</a>
+					<div class="row">
+						<div class="col-12">
+							<div class="phone">
+								+7 (727) <span>349 48 79</span>
+							</div>
+						</div>
+						<div class="col-6 pr-0">
+							<div class="graphic-1"><span class="demibold">Пн-Пт</span>&nbsp;&nbsp;09:00-20:00</div>
+						</div>
+						<div class="col-6 pl-0 text-right">
+							<div class="graphic-2"><span class="demibold">Сб-Вс</span>&nbsp;&nbsp;10:00-18:00</div>
+						</div>
+					</div>
+				</div>
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item dropdown dropdown-city">
 						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -1947,15 +1971,17 @@
 				</ul>
 			</div>
 		</nav>
-		<div class="search-form d-block d-lg-none">
-			<div class="input-group">
-				<input type="text" class="form-control" placeholder="Поиск: введите искомое например телевизоры Sony" aria-label=""
-				 aria-describedby="basic-addon1">
-				<div class="input-group-append">
-					<button class="btn" type="button"></button>
+		<form id="search-form-mobile">
+			<div class="search-form d-lg-none">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Поиск: введите искомое например телевизоры Sony" aria-label=""
+					 aria-describedby="basic-addon1">
+					<div class="input-group-append">
+						<button class="btn" type="submit"></button>
+					</div>
 				</div>
 			</div>
-		</div>
+		</form>
 		<div class="clearfix"></div>
 	</div>
 	<div class="slider">
@@ -3367,8 +3393,8 @@
 					<h5>Видеообзоры</h5>
 					<div class="video-preview">
 						<div class="video">
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/nwDca0pnqXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-							 allowfullscreen></iframe>
+							<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/nwDca0pnqXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							 allowfullscreen></iframe>-->
 						</div>
 					</div>
 				</div>
@@ -3985,6 +4011,7 @@
 
 		</div>
 	</div>
+	<div id="search-fade" class="search-fade"></div>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
