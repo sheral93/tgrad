@@ -5447,7 +5447,11 @@ a.btn-fb svg .st0 {
 }
 
 .items-carousel-2 {
-    margin-top: 50px;
+    margin-top: 40px;
+}
+
+.items-carousel-2 .slick-dots {
+    top: -62px;
 }
 
 .items-carousel-2 .item-compare {
@@ -5462,6 +5466,24 @@ a.btn-fb svg .st0 {
 
 .items-carousel .item .item-compare-mobile {
     display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .items-carousel-3 {
+        padding: 0 21px 0 21px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .items-carousel-3 {
+        padding: 0 33px 0 33px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .items-carousel-3 {
+        padding: 0 30px 0 30px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -5481,6 +5503,10 @@ a.btn-fb svg .st0 {
         width: 60px;
         margin: 0 auto;
     }
+    .items-carousel-3 .item .item-image {
+        width: 60px;
+        margin: 0 auto;
+    }
     .items-carousel .item {
         padding: 10px;
         border-radius: 10px;
@@ -5495,9 +5521,7 @@ a.btn-fb svg .st0 {
     .items-carousel .item .row {
         margin: 0 -5px;
     }
-    .items-carousel .item .col-1, .items-carousel .item .col-2, .items-carousel .item .col-3, .items-carousel .item .col-4,
-    .items-carousel .item .col-5, .items-carousel .item .col-6, .items-carousel .item .col-7, .items-carousel .item .col-8,
-    .items-carousel .item .col-9, .items-carousel .item .col-10, .items-carousel .item .col-11, .items-carousel .item .col-12 {
+    .items-carousel .item .col-1, .items-carousel .item .col-2, .items-carousel .item .col-3, .items-carousel .item .col-4, .items-carousel .item .col-5, .items-carousel .item .col-6, .items-carousel .item .col-7, .items-carousel .item .col-8, .items-carousel .item .col-9, .items-carousel .item .col-10, .items-carousel .item .col-11, .items-carousel .item .col-12 {
         padding: 0 5px;
     }
     .items-carousel .item .item-title {
@@ -5549,18 +5573,43 @@ a.btn-fb svg .st0 {
     .items-carousel .item.item.item-lg .btn-buy {
         margin-left: -5px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
+    .items-carousel-3 .item-compare {
+        position: absolute;
+        top: 10px;
+        right: 6px;
+    }
+    .items-carousel-3 .item {
+        width: 125px;
+        margin: 10px 3px;
+        padding: 10px;
+        border-radius: 10px;
+        position: relative;
+    }
+    .items-carousel-3 .item .item-image {
+        line-height: 1;
+        height: auto;
+    }
+    .items-carousel-3 .item .item-title {
+        height: auto;
+        margin: 10px 0;
+    }
+    .items-carousel-3 .slick-prev, .items-carousel-3 .slick-next, .items-carousel-3 .slick-dots {
+        display: none!important;
+    }
+    .items-carousel-3 .item-rating {
+        margin: 13px 0;
+    }
+    .items-carousel-3 .item .btn-buy {
+        background-position: 7px center;
+        padding-left: 33px;
+        width: 100%;
+    }
+    .items-carousel-3 .item .item-old-price {
+        margin: 5px 0;
+    }
+    .items-carousel-3 {
+        margin-top: 30px;
+    }
     .catalog-items .item {
         padding: 10px;
         border-radius: 10px;
@@ -5575,9 +5624,7 @@ a.btn-fb svg .st0 {
     .catalog-items .item .row {
         margin: 0 -5px;
     }
-    .catalog-items .item .col-1, .catalog-items .item .col-2, .catalog-items .item .col-3, .catalog-items .item .col-4,
-    .catalog-items .item .col-5, .catalog-items .item .col-6, .catalog-items .item .col-7, .catalog-items .item .col-8,
-    .catalog-items .item .col-9, .catalog-items .item .col-10, .catalog-items .item .col-11, .catalog-items .item .col-12 {
+    .catalog-items .item .col-1, .catalog-items .item .col-2, .catalog-items .item .col-3, .catalog-items .item .col-4, .catalog-items .item .col-5, .catalog-items .item .col-6, .catalog-items .item .col-7, .catalog-items .item .col-8, .catalog-items .item .col-9, .catalog-items .item .col-10, .catalog-items .item .col-11, .catalog-items .item .col-12 {
         padding: 0 5px;
     }
     .catalog-items .item .item-title {
@@ -5652,6 +5699,17 @@ a.btn-fb svg .st0 {
     }
     .items-carousel-2 .item:hover {
         box-shadow: none;
+    }
+    .items-carousel-3 .item {
+        width: 200px;
+        padding: 20px;
+        margin: 8px;
+    }
+    .items-carousel-3 {
+        margin-top: 32px;
+    }
+    .items-carousel-3 .items-carousel-3 {
+        top: -62px;
     }
 }
 
