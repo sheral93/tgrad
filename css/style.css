@@ -1678,7 +1678,6 @@ a.slide-btn {
 .item .item-image {
     margin-bottom: 19px;
     text-align: center;
-    line-height: 8.6;
     vertical-align: middle;
 }
 
@@ -1688,12 +1687,12 @@ a.slide-btn {
 
 .item .item-image a {
     display: inline-block;
-    max-height: 100%;
+    max-height: 120px;
 }
 
 .item .item-image img {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 120px;
 }
 
 .item .item-title {
@@ -1856,7 +1855,15 @@ a.slide-btn {
     }
     .item.item-lg .item-image {
         height: 172px;
-        line-height: 10.75;
+        max-height: 172px;
+    }
+    .item.item-lg .item-image a {
+        height: 172px;
+        max-height: 172px;
+    }
+    .item.item-lg .item-image img {
+        height: 172px;
+        max-height: 172px;
     }
 }
 
@@ -1872,12 +1879,6 @@ a.slide-btn {
     }
     .item .item-image img {
         max-height: 120px;
-    }
-    .item .item.item-lg .item-image {
-        height: 160px;
-    }
-    .item .item.item-lg .item-image img {
-        max-height: 160px;
     }
 }
 
@@ -2693,6 +2694,7 @@ a.slide-btn {
         margin: 10px 0;
     }
     .catalog-items.list-styled .item .item-old-price {
+        font-weight: 400;
         margin: 10px 0;
     }
     .catalog-items.list-styled .item .item-rating {
@@ -2725,20 +2727,23 @@ a.slide-btn {
     .catalog-items.list-styled .item .row {
         margin: 0;
     }
-    .catalog-items.list-styled .item .col-4 {
+    .catalog-items.list-styled .item .col-5-1 {
         -ms-flex: 0 0 25%;
         flex: 0 0 100%;
         max-width: 25%;
         padding: 0;
     }
-    .catalog-items.list-styled .item .col-4 .item-image {
+    .catalog-items.list-styled .item .col-5-1 .item-image {
         width: 100%;
         margin: 0;
     }
-    .catalog-items.list-styled .item .col-8 {
+    .catalog-items.list-styled .item .col-5-2 {
         -ms-flex: 0 0 75%;
         flex: 0 0 100%;
         max-width: 75%;
+        padding: 0;
+    }
+    .catalog-items.list-styled .item .col-8 {
         padding: 0;
     }
 }
@@ -3542,7 +3547,7 @@ ul.list.dashed li {
     margin: 0;
     background: transparent;
     text-align: right;
-    width: 22px;
+    width: 24px;
     font-size: 1.375rem;
     padding: 0;
     line-height: 1;
