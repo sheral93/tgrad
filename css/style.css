@@ -5497,7 +5497,7 @@ a.btn-fb svg .st0 {
         font-size: 16px;
     }
     .items-carousel-2 {
-        margin-top: 30px;
+        margin-top: 0;
     }
     .items-carousel-2 .item .item-image {
         width: 60px;
@@ -5608,7 +5608,7 @@ a.btn-fb svg .st0 {
         margin: 5px 0;
     }
     .items-carousel-3 {
-        margin-top: 30px;
+        margin-top: 0;
     }
     .catalog-items .item {
         padding: 10px;
@@ -5706,10 +5706,10 @@ a.btn-fb svg .st0 {
         margin: 8px;
     }
     .items-carousel-3 {
-        margin-top: 32px;
+        margin-top: 0;
     }
-    .items-carousel-3 .items-carousel-3 {
-        top: -62px;
+    .items-carousel-3 .slick-dots {
+        top: -40px;
     }
 }
 
