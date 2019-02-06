@@ -101,7 +101,6 @@ body.body-404 {
 @media screen and (max-width: 767px) {
     .container {
         width: 320px;
-        overflow: hidden;
     }
 }
 
@@ -1411,6 +1410,17 @@ a.no-underline {
     z-index: 3;
     left: 0;
     right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    overflow-y: hidden;
+    -webkit-transition: height .2s linear 0s;
+    -moz-transition: height .2s linear 0s;
+    -o-transition: height .2s linear 0s;
+    transition: height .2s linear 0s;
+}
+
+.mobile-menu.show {
+    height: 100%;
 }
 
 .slider {
@@ -5156,9 +5166,26 @@ a.btn-fb svg .st0 {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    .items-carousel-2.slick-slider, .items-carousel-3.slick-slider {
+        height: 252px;
+    }
+    .items-carousel-2.slick-slider .slick-list, .items-carousel-3.slick-slider .slick-list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: -1000px;
+        height: 252px;
+    }
+}
+
 @media (max-width: 767px) {
     .container.container-sm-full {
-        width: 320px;
+        max-width: 100%;
+        width: 100%;
         padding: 0;
         margin: 0 auto;
         overflow: hidden;

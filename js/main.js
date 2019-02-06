@@ -529,6 +529,23 @@ $(document).ready(function () {
     $(this).parent().parent().find(".items-carousel-sm-show").show();
     $(this).parent().parent().find(".items-carousel-sm-hide").hide();
   });
+
+  $('#navbarSupportedContent').on('show.bs.collapse', function () {
+    $("body").css("overflow-y", "hidden");
+      
+  })
+  $('#navbarSupportedContent').on('shown.bs.collapse', function () {
+    $(".mobile-menu").css("overflow-y", "auto");  
+    //$(".mobile-menu").css("height", "100%");
+    
+  })
+  $('#navbarSupportedContent').on('hide.bs.collapse', function () {
+    $("body").css("overflow-y", "auto");
+    $(".mobile-menu").css("overflow-y", "hidden");
+  })
+  $('#navbarSupportedContent').on('hidden.bs.collapse', function () {
+    
+  })
 });
 
 
