@@ -546,6 +546,20 @@ $(document).ready(function () {
   $('#navbarSupportedContent').on('hidden.bs.collapse', function () {
     
   })
+
+  $('.show-compare-details-item-hidden').click(function () {
+    $(".compare-details-items-hidden").stop().slideDown();
+    $(".hide-compare-details-item-hidden").show();
+    $(".show-compare-details-item-hidden").hide();
+    return false;
+  });
+
+  $('.hide-compare-details-item-hidden').click(function () {
+    $(".compare-details-items-hidden").stop().slideUp();
+    $(".show-compare-details-item-hidden").show();
+    $(".hide-compare-details-item-hidden").hide();
+    return false;
+  });
 });
 
 

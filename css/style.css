@@ -1297,22 +1297,22 @@ a.no-underline {
     color: #fff;
 }
 
-.header .mobile-menu .nav-item.dropdown .nav-link .nav-image {
+.header .mobile-menu .nav-item .nav-link .nav-image {
     height: 24px;
     text-align: center;
     margin-right: 10px;
 }
 
-.header .mobile-menu .nav-item.dropdown .nav-link .nav-image svg {
+.header .mobile-menu .nav-item .nav-link .nav-image svg {
     height: 18px;
     vertical-align: baseline;
 }
 
-.header .mobile-menu .nav-item.dropdown .nav-link .nav-image svg .st0 {
+.header .mobile-menu .nav-item .nav-link .nav-image svg .st0 {
     fill: #2e3071;
 }
 
-.header .mobile-menu .nav-item.dropdown .nav-link:hover .nav-image svg .st0 {
+.header .mobile-menu .nav-item .nav-link:hover .nav-image svg .st0 {
     fill: #ffffff;
 }
 
@@ -1668,6 +1668,7 @@ a.slide-btn {
     padding: 20px;
     font-size: .875rem;
     margin-bottom: 16px;
+    position: relative;
 }
 
 .item:hover {
@@ -3405,6 +3406,9 @@ ul.list.dashed li {
 }
 
 @media screen and (max-width: 767px) {
+    .lg-filter-form-reset {
+        display: none!important;
+    }
     #filter-form {
         position: absolute;
         top: 0;
@@ -3472,7 +3476,7 @@ ul.list.dashed li {
         background-image: url("img/add.svg");
     }
     .position-static {
-        position: stat
+        position: static;
     }
 }
 
@@ -4399,6 +4403,20 @@ a.secondary svg .st0 {
     margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 575px) {
+    .faq {
+        padding: 14px 143px;
+        border-bottom: 1px solid #cdcdcd;
+        margin: 0 -143px 0 -143px
+    }
+    .faq p {
+        margin-bottom: 0;
+    }
+    .faq a.collapsed {
+        margin-bottom: 0;
+    }
+}
+
 .profile-menu svg {
     height: 25px;
     margin: 0 auto;
@@ -4695,16 +4713,59 @@ a.secondary svg .st0 {
         border-radius: 13px;
         position: absolute;
         right: 0;
-        bottom: 14px;
         padding: 5px;
         display: block;
+        height: 26px;
+        line-height: 16px;
     }
     .share svg {
         width: 16px;
         height: 16px;
+        vertical-align: top;
     }
-    .share svg .st0 {
+    .share-dropleft .dropdown-menu {
+        border-radius: 0 13px 13px 0;
+        background-color: #999999;
+    }
+    .share-dropleft .dropdown-menu {
+        background-color: #999999;
+        height: 26px;
+        padding: 5px 0 5px 7px;
+        border: none;
+        border-radius: 13px 0 0 13px;
+        line-height: 14px;
+        min-width: auto;
+        margin-right: 0;
+        min-width: 91px;
+    }
+    .share-dropleft .dropdown-menu a {
+        display: inline-block;
+        line-height: 14px;
+        height: 14px;
+        margin: 0 5px;
+        vertical-align: top;
+    }
+    .share-dropleft .dropdown-menu a svg {
+        height: 14px;
+        vertical-align: top;
+    }
+    .share-dropleft .dropdown-menu a svg .st0 {
         fill: #ffffff;
+    }
+    .share-dropleft .dropdown-menu a.vk-share {
+        display: inline-block;
+        line-height: 10px;
+        margin-top: 2px;
+        height: 14px;
+        vertical-align: middle;
+    }
+    .share-dropleft .dropdown-menu a.vk-share svg {
+        height: 10px;
+    }
+    .share-dropleft.show .share {
+        padding-left: 0;
+        border-radius: 0 15px 15px 0;
+        background-color: #999999;
     }
     .lSSlideWrapper {
         margin-bottom: 0;
@@ -4871,7 +4932,13 @@ a.secondary svg .st0 {
 }
 
 @media screen and (min-width: 992px) {
-    .share {}
+    .share {
+        margin-top: 10px;
+        display: block;
+        padding: 6px 12px 6px 0;
+        line-height: 16px;
+        height: 30px;
+    }
     .share svg {
         width: 16px;
         height: 16px;
@@ -4881,6 +4948,41 @@ a.secondary svg .st0 {
     }
     .share:hover svg .st0 {
         fill: #e65a64;
+    }
+    .share-dropleft .dropdown-menu {
+        background-color: #f3f3f3;
+        height: 30px;
+        padding: 7px;
+        border: none;
+        border-radius: 15px 0 0 15px;
+        line-height: 14px;
+        min-width: auto;
+        margin-right: 0;
+        min-width: 91px;
+    }
+    .share-dropleft .dropdown-menu a {
+        display: inline-block;
+        line-height: 14px;
+        height: 14px;
+        margin: 0 5px;
+    }
+    .share-dropleft .dropdown-menu a svg {
+        height: 14px;
+    }
+    .share-dropleft .dropdown-menu a svg .st0 {
+        fill: #878787;
+    }
+    .share-dropleft .dropdown-menu a.vk-share {
+        display: inline-block;
+        line-height: 14px;
+        height: 14px;
+    }
+    .share-dropleft .dropdown-menu a.vk-share svg {
+        height: 10px;
+    }
+    .share-dropleft.show .share {
+        border-radius: 0 15px 15px 0;
+        background-color: #f3f3f3;
     }
 }
 
@@ -5592,14 +5694,13 @@ a.btn-fb svg .st0 {
     }
     .items-carousel .item .item-image {
         line-height: 1;
-        position: relative;
         margin: 0;
     }
     .items-carousel .item .item-compare-mobile {
         position: absolute;
         display: block;
-        top: -7px;
-        right: 0;
+        top: 5px;
+        left: 90px;
     }
     .items-carousel .item .item-compare-mobile a {
         width: 30px;
@@ -5695,14 +5796,13 @@ a.btn-fb svg .st0 {
     }
     .catalog-items .item .item-image {
         line-height: 1;
-        position: relative;
         margin: 0;
     }
     .catalog-items .item .item-compare-mobile {
         position: absolute;
         display: block;
-        top: -7px;
-        right: 0;
+        top: 5px;
+        left: 90px;
     }
     .catalog-items .item .item-compare-mobile a {
         width: 30px;
@@ -5772,9 +5872,138 @@ a.btn-fb svg .st0 {
     }
 }
 
+.news-item-image-cover {
+    display: block;
+    height: 170px;
+    background-size: cover;
+}
+
+.news-item-image-cover-2 {
+    display: block;
+    height: 180px;
+    background-size: cover;
+}
+
+.news-item-image-cover-3 {
+    height: 170px;
+    display: block;
+    background-size: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .news-item-image-cover {
+        height: 115px;
+    }
+    .news-item-image-cover-2 {
+        height: 138px;
+    }
+    .news-item-image-cover-3 {
+        height: 210px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .news-item-image-cover {
+        height: 160px;
+    }
+    .news-item-image-cover-2 {
+        height: 182px;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .items-carousel-2 .item {
         width: 320px;
         margin: 0 30px;
     }
+    .wholesales-login-form .btn-lg {
+        width: 200px;
+        height: 65px;
+    }
+    .news-item-image-cover {
+        height: 200px;
+    }
+    .news-item-image-cover-2 {
+        height: 220px;
+    }
+    .news-item-image-cover-3 {
+        height: 214px;
+    }
+}
+
+.compare-details-items-hidden {
+    display: none;
+}
+
+.compare-details-items-hidden .compare-details-item:first-child {
+    border-top: none;
+}
+
+.hide-compare-details-item-hidden {
+    display: none;
+}
+
+#fast-buy-modal h5 {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    #fast-buy-modal .modal-dialog {
+        max-width: 580px;
+        width: 580px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #fast-buy-modal .modal-dialog {
+        max-width: 580px;
+        width: 580px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #fast-buy-modal .modal-dialog {
+        max-width: 580px;
+        width: 580px;
+    }
+}
+
+#fast-buy-modal .btn-lg {
+    width: 170px;
+    padding-top: 6px;
+    padding-top: 6px;
+    padding-bottom: 7px;
+    font-size: 15px;
+    margin-top: 32px;
+    margin-bottom: 30px
+}
+
+#fast-buy-modal .form-control.form-control-lg {
+    height: 46px;
+    font-size: 16px;
+}
+
+.found-cheaper {
+    color: #595959;
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.found-cheaper:hover {
+    color: #595959;
+    text-decoration: none;
+}
+
+.found-cheaper svg {
+    height: 25px;
+    vertical-align: top;
+    margin-right: 7px;
+}
+
+.found-cheaper svg .st0 {
+    fill: #585ed9;
+}
+
+.found-cheaper:hover svg .st0 {
+    fill: #e65a64;
 }
