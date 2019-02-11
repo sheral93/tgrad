@@ -2788,6 +2788,7 @@ a.slide-btn {
 
 .content {
     padding: 30px 0 60px;
+    overflow-x: hidden;
 }
 
 .contacts-select {
@@ -6001,4 +6002,17 @@ a.btn-fb svg .st0 {
 
 .found-cheaper:hover svg .st0 {
     fill: #e65a64;
+}
+
+#mobile-menu-fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index:2;
+    height: 100%;
+    width: 100%;
+    display: none;
 }
