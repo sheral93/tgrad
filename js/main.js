@@ -260,12 +260,6 @@ $(document).ready(function () {
     return;
   })
 
-  $(document).click(function (event) {
-    if ((!$(event.target).is("#filter-form, #filter-form *, #filter-form-show")) && ($("#filter-form").css("display") == "block")) {
-      $("#filter-form").slideUp();
-    }
-  });
-
   $('.filter-form-reset').click(function () {
     $('#filter-form form').trigger('reset');
     $("#slider-range").slider("values", 0, $("#slider-range").slider("option", "min"));
@@ -536,7 +530,7 @@ $(document).ready(function () {
     $(".footer").hide();
   })
   $('#navbarSupportedContent').on('shown.bs.collapse', function () {
-    $(".mobile-menu").css("overflow-y", "auto");      
+    $(".mobile-menu").css("overflow-y", "auto");
   })
   $('#navbarSupportedContent').on('hide.bs.collapse', function () {
     $("body").css("overflow-y", "auto");
@@ -545,7 +539,7 @@ $(document).ready(function () {
     $(".footer").show();
   })
   $('#navbarSupportedContent').on('hidden.bs.collapse', function () {
-    
+
   })
 
   $('.show-compare-details-item-hidden').click(function () {
@@ -560,6 +554,32 @@ $(document).ready(function () {
     $(".show-compare-details-item-hidden").show();
     $(".hide-compare-details-item-hidden").hide();
     return false;
+  });
+
+  $('.share-show').click(function () {
+    $('.share-show').hide();
+    $('.share-dropleft-socials').addClass("show");
+    $('.share-dropleft-socials').toggle("slide", 100).promise().done(function(){
+      $('.share-dropleft-socials').css("display", "inline-block");
+    });
+    return false;
+  });
+  $('.share-hide').click(function () {
+    $('.share-show').show();
+    $('.share-dropleft-socials').removeClass("show");
+    $('.share-dropleft-socials').hide();
+    return false;
+  });
+
+  $(document).click(function (event) {
+    if ((!$(event.target).is("#filter-form, #filter-form *, #filter-form-show")) && ($("#filter-form").css("display") == "block")) {
+      $("#filter-form").slideUp();
+    }
+    if (!$(event.target).is(".share-dropleft-socials, .share-dropleft-socials *")) {
+      $('.share-show').show();
+      $('.share-dropleft-socials').removeClass("show");
+      $('.share-dropleft-socials').hide();
+    }
   });
 });
 

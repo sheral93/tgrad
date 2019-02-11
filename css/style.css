@@ -4936,57 +4936,58 @@ a.secondary svg .st0 {
 }
 
 @media screen and (min-width: 992px) {
-    .share {
-        margin-top: 10px;
+    .share-dropleft {
         display: block;
-        padding: 6px 12px 6px 0;
-        line-height: 16px;
-        height: 30px;
+        margin-top: 10px;
     }
-    .share svg {
+    .share-dropleft .share-dropleft-socials {
+        background-color: #f3f3f3;
+        padding: 2px;
+        border: none;
+        line-height: 14px;
+        margin-right: 0;
+        min-width: 110px;
+        display: none;
+        border-radius: 15px;
+        text-align: center
+    }
+    .share-dropleft .share-dropleft-socials a {
+        display: inline-block;
+        line-height: 14px;
+        height: 14px;
+        margin: 3px;
+    }
+    .share-dropleft .share-dropleft-socials a svg {
+        height: 14px;
+    }
+    .share-dropleft .share-dropleft-socials a svg .st0 {
+        fill: #878787;
+    }
+    .share-dropleft .share-dropleft-socials a.vk-share {
+        display: inline-block;
+        line-height: 14px;
+        height: 14px;
+    }
+    .share-dropleft .share-dropleft-socials a.vk-share svg {
+        height: 10px;
+    }
+    .share-show {
+        display: inline-block;
+        margin-top: 7px;
+    }
+    .share-show, .share-dropleft .share-dropleft-socials a.share-hide {
+        line-height: 16px;
+        height: 16px;
+    }
+    .share-show svg, .share-dropleft .share-dropleft-socials a.share-hide svg {
         width: 16px;
         height: 16px;
     }
-    .share svg .st0 {
+    .share-show svg .st0, .share-dropleft .share-dropleft-socials a.share-hide svg .st0 {
         fill: #939393;
     }
-    .share:hover svg .st0 {
+    .share-show:hover svg .st0, .share-dropleft .share-dropleft-socials a.share-hide:hover svg .st0 {
         fill: #e65a64;
-    }
-    .share-dropleft .dropdown-menu {
-        background-color: #f3f3f3;
-        height: 30px;
-        padding: 7px;
-        border: none;
-        border-radius: 15px 0 0 15px;
-        line-height: 14px;
-        min-width: auto;
-        margin-right: 0;
-        min-width: 91px;
-    }
-    .share-dropleft .dropdown-menu a {
-        display: inline-block;
-        line-height: 14px;
-        height: 14px;
-        margin: 0 5px;
-    }
-    .share-dropleft .dropdown-menu a svg {
-        height: 14px;
-    }
-    .share-dropleft .dropdown-menu a svg .st0 {
-        fill: #878787;
-    }
-    .share-dropleft .dropdown-menu a.vk-share {
-        display: inline-block;
-        line-height: 14px;
-        height: 14px;
-    }
-    .share-dropleft .dropdown-menu a.vk-share svg {
-        height: 10px;
-    }
-    .share-dropleft.show .share {
-        border-radius: 0 15px 15px 0;
-        background-color: #f3f3f3;
     }
 }
 
@@ -6014,7 +6015,7 @@ a.btn-fb svg .st0 {
     bottom: 0;
     right: 0;
     background-color: #ffffff;
-    z-index:2;
+    z-index: 2;
     height: 100%;
     width: 100%;
     display: none;
