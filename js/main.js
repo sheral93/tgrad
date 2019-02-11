@@ -532,7 +532,9 @@ $(document).ready(function () {
 
   $('#navbarSupportedContent').on('show.bs.collapse', function () {
     $("body").css("overflow-y", "hidden");
-      
+    $(".content").hide();
+    $(".main").hide();
+    $(".footer").hide();
   })
   $('#navbarSupportedContent').on('shown.bs.collapse', function () {
     $(".mobile-menu").css("overflow-y", "auto");  
@@ -542,6 +544,9 @@ $(document).ready(function () {
   $('#navbarSupportedContent').on('hide.bs.collapse', function () {
     $("body").css("overflow-y", "auto");
     $(".mobile-menu").css("overflow-y", "hidden");
+    $(".content").show();
+    $(".main").show();
+    $(".footer").show();
   })
   $('#navbarSupportedContent').on('hidden.bs.collapse', function () {
     

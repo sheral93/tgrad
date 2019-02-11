@@ -5282,19 +5282,14 @@ a.btn-fb svg .st0 {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    body {
+@media (max-width: 767px) {
+    .content {
         overflow-x: hidden;
     }
-    .items-carousel-2.slick-slider, .items-carousel-3.slick-slider {
-        height: 252px;
-    }
     .items-carousel-2.slick-slider .slick-list, .items-carousel-3.slick-slider .slick-list {
-        position: absolute;
         top: 0;
         left: 0;
-        right: -1000px;
-        height: 252px;
+        width: 520px;
     }
 }
 
