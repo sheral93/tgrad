@@ -5282,8 +5282,11 @@ a.btn-fb svg .st0 {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     body {
+        overflow-x: hidden;
+    }
+    .section {
         overflow-x: hidden;
     }
     .items-carousel-2.slick-slider, .items-carousel-3.slick-slider {
