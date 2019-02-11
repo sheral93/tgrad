@@ -535,6 +535,7 @@ $(document).ready(function () {
     $(".content").hide();
     $(".main").hide();
     $(".footer").hide();
+    return false
   })
   $('#navbarSupportedContent').on('shown.bs.collapse', function () {
     $(".mobile-menu").css("overflow-y", "auto");  
