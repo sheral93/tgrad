@@ -535,12 +535,9 @@ $(document).ready(function () {
     $(".content").hide();
     $(".main").hide();
     $(".footer").hide();
-    return false
   })
   $('#navbarSupportedContent').on('shown.bs.collapse', function () {
-    $(".mobile-menu").css("overflow-y", "auto");  
-    //$(".mobile-menu").css("height", "100%");
-    
+    $(".mobile-menu").css("overflow-y", "auto");      
   })
   $('#navbarSupportedContent').on('hide.bs.collapse', function () {
     $("body").css("overflow-y", "auto");
